@@ -26,7 +26,7 @@
   
 }
 .slide1 {
-  width: 100vw;
+  width: 110vw;
   height: 100vh;
   /*background-image: url('../images/astronomy.jpg'); */
   
@@ -66,20 +66,18 @@
 .knowmore {
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
-  
-  transform: translate(-50%, -50%);
-  top: 70%;
-  left: 50%;
-  border: 2px solid whitesmoke;
-  border-radius: 10px;
+  position: absolute;
+  top: 75%;
+  left: 3%;
+  ;
   padding: 15px;
-  color: whitesmoke;
-  background-color:rgba(0, 0, 0, 0.75);
+  color: #1e1e1e;
+  
   z-index: 3;
   text-decoration: none;
-  animation: fadein 9s;
+  animation: fadein 1s;
   
-  animation-duration: 9s;
+  animation-duration: 1s;
   animation-name: myanim;
 }
 
@@ -90,13 +88,99 @@
 }
 
 .slide2 {
-  width: 100vw;
+  width: 60vw;
   height: 100vh;
-  background-color: rgb(4, 50, 53);
-  
-  
+  background-color:#EEEEEE;
 }
 
+
+.intro {
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 2.5rem;
+  white-space: normal;
+  margin-left: 20px;
+  line-height: 1.5;
+ 
+}
+
+.introText {
+  color: #aaa;
+  font-size: 1.3rem;
+}
+.introLinesContainer1 {
+  display: inline-block;
+  width: 50vh;
+  height: 100vh;
+  vertical-align: top;
+  position: absolute;
+  top: 30px;
+  left: 15%;
+
+}
+.introLinesContainer2 {
+  display: inline-block;
+  width: 150vh;
+  height: 100vh;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.introLinesContainer3 {
+  display: inline-block;
+  width: 150vh;
+  height: 100vh;
+  vertical-align: top;
+  position: absolute;
+  top: 60%;
+  left: 12%;
+}
+.introLinesContainer4 {
+  display: inline-block;
+  width: 150vh;
+  height: 100vh;
+  vertical-align: top;
+  position: absolute;
+  top: 60%;
+  left: 19%;
+}
+.introLines {
+  text-align: center;
+  height: 33.33333vh;
+  line-height: .9;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 30vh;
+  transform: translate3d(-0.0688912px, 0px, 0px);
+  transition: transform 1.4s cubic-bezier(.165,.84,.44,1);
+
+}
+.slide3 {
+  width: 40vw;
+  height: 100vh;
+  background-color:#EEEEEE;
+  position: relative;
+}
+.sprite {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: black;
+    position: absolute;
+    top: 5%;
+    left: -10%;
+    z-index: 2;
+}
+
+.why { 
+  position: absolute;
+  top: 48%;
+  Left: 20%;
+  font-size: 20px;
+
+}
+ 
 .test {
   width: 600px;
   height: 600px;
@@ -110,7 +194,7 @@
   overflow: hidden;
 }
 
-.stefPhoto {
+.hacker {
   
   left:0;
   top:0;
@@ -121,7 +205,72 @@
   mix-blend-mode:lighten;
   
 }
+.stefPhoto2 {
+  padding-top: 80px;
+  height: 100%;
+  width: 80%;
+  z-index: 1;
+  object-fit: cover;
+  
+}
 
+.stefPhotosContainer {
+  position: relative;
+  width: 1500px;
+}
+.hidePhoto {
+  position: absolute;
+  left:520px;
+  top:240px;
+  height: 35%;
+  width: 25%;
+  z-index: 1;
+  object-fit: cover;
+  cursor: pointer;
+}
+.headerWrapper {
+  position: relative;
+  width: 5rem;
+  height: 100vh;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  width: 100vh;
+  z-index: 10;
+  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+}
+.headerMenu {
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #aaa;
+  font-size: .875rem;
+  margin: 2.5rem;
+}
+.headerMenuitem {
+  display: inline-block;
+  position: relative;
+  padding: 1.25rem 0;
+  margin: 0 1.25rem;
+  color: #1e1e1e;
+}
+.headerMenuItemTitle {
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2.5rem;
+  display: block;
+  color: #1e1e1e;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 .stefVideo {
   position:absolute;
   left:0;
