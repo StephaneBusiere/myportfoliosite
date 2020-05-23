@@ -26,6 +26,15 @@ class Example extends Component {
       
       <img className={styles.hacker} src={hacker} />
       <Link to="#intro" state={{scrolled:true}} className={styles.knowmore}>WHO I AM ?</Link>
+      <div className={styles.divisionLineWrapper}>
+      
+      <div    className={styles.divisionLine}>
+      <ul className={styles.divisionLineContaint}>
+      
+      <li className={styles.divisionLineTitle}>Busiere Stéphane</li>
+      </ul>
+      </div>
+      </div>
      <Header/>
       <div id="intro" className={styles.intro}>
       <p className={styles.introText}>
@@ -77,14 +86,15 @@ class Example extends Component {
       </Slide>
       </div>
       
-      </div>
+      
       <div className={styles.slide3}>
       <object className={styles.sprite}  data={sprite}>svg-animation</object>
       <p className={styles.why}>WHY YOU CAN TRUST ME ?</p>
       </div>
+      </div>
       <div className={styles.slide4}>
       <div className={styles.railwrapper1}>
-      <span className={styles.railtext}>HONESTY-HONESTY-HONESTY-HONESTY</span>
+      <span className={styles.railtext}>HONESTY-HONESTY-HONESTY</span>
       </div>
       
       </div>

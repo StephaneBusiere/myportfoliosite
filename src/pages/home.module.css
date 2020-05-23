@@ -2,31 +2,23 @@
 .outerwrapper {
   width: 100vh;
   height: 4000px;
-  transform: rotate(-90deg)translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: auto;
-  overflow-x: hidden;
+  
   position: relative;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  
 }
-::-webkit-scrollbar {
-  display: none;
-}
+
+
 .container {
   width: 100vh;
-  height: 1100px;
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
+  height: 4000px;
+  
+  
 
 
   
 }
 .slide1 {
-  width: 110vw;
+  width: 80vw;
   height: 100vh;
   /*background-image: url('../images/astronomy.jpg'); */
   
@@ -67,7 +59,7 @@
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  top: 75%;
+  top: 20%;
   left: 3%;
   ;
   padding: 15px;
@@ -87,11 +79,55 @@
   background-color: rgba(24, 221, 195, 0.75);
 
 }
+.divisionLineWrapper {
+  position: relative;
+  width: 5rem;
+  height: 100vh;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: top;
+}
 
+.divisionLine {
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  width: 100vh;
+  z-index: 10;
+  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+  
+}
+.divisionLine[data-active='true'] {
+  box-shadow: 0 2px 8px rgba(152,168,188,.2);
+  display: none;
+}
+
+.divisionLineContaint {
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #aaa;
+  font-size: .875rem;
+  margin: 2.5rem;
+}
+
+
+.divisionLineTitle {
+  position: absolute;
+  top: 30%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2.5rem;
+  display: block;
+  color: #1e1e1e;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 .slide2 {
   width: 60vw;
   height: 100vh;
   background-color:#EEEEEE;
+  display: flex;
 }
 
 
@@ -102,6 +138,7 @@
   padding: 2.5rem;
   white-space: normal;
   margin-left: 20px;
+  margin-top: 50px;
   line-height: 1.5;
  
 }
@@ -113,72 +150,76 @@
 .introLinesContainer1 {
   display: inline-block;
   width: 50vh;
-  height: 100vh;
-  vertical-align: top;
+  height: 2vh;
   position: absolute;
-  top: 30px;
-  left: 15%;
+  top: -50px;
+  left: 100%;
+  font-size: 35vh;
 
 }
 .introLinesContainer2 {
   display: inline-block;
-  width: 150vh;
+  width: 50vh;
   height: 100vh;
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 8%;
+  left: 75%;
+  font-size: 22vh;
 }
 .introLinesContainer3 {
   display: inline-block;
-  width: 150vh;
+  width: 50vh;
   height: 100vh;
   vertical-align: top;
   position: absolute;
-  top: 60%;
-  left: 12%;
+  top: 15%;
+  left: 60%;
+  font-size: 25vh;
 }
 .introLinesContainer4 {
   display: inline-block;
-  width: 150vh;
+  width: 40vh;
   height: 100vh;
   vertical-align: top;
   position: absolute;
-  top: 60%;
-  left: 19%;
+  top: 15%;
+  left: 110%;
+  font-size: 25vh;
 }
 .introLines {
   text-align: center;
-  height: 33.33333vh;
-  line-height: .9;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 30vh;
-  transform: translate3d(-0.0688912px, 0px, 0px);
-  transition: transform 1.4s cubic-bezier(.165,.84,.44,1);
+  width: 50vh;
+  height: 4vh;
+
+  
 
 }
 .slide3 {
   width: 40vw;
-  height: 100vh;
-  background-color:#EEEEEE;
+  height: 80vh;
+  background-color: #FFFFFF;
   position: relative;
 }
 .sprite {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 120%;
+    width: 120%;
     color: black;
     position: absolute;
-    top: 5%;
-    left: -10%;
+    top: 0%;
+    left: 50%;
     z-index: 2;
+    transform: rotate(90deg);
 }
 
 .why { 
   position: absolute;
   top: 48%;
-  Left: 20%;
+  Left: 80%;
   font-size: 20px;
+  width: 400px;
 
 }
  
@@ -195,9 +236,9 @@
   
 }
 .stefPhoto2 {
-  padding-top: 80px;
+  padding-top: 0px;
   height: 100%;
-  width: 80%;
+  width: 100%;
   z-index: 1;
   object-fit: cover;
   position: relative;
@@ -220,10 +261,10 @@
 }
 .hidePhoto {
   position: absolute;
-  left:520px;
+  left:280px;
   top:240px;
   height: 35%;
-  width: 25%;
+  width: 40%;
   z-index: 6;
   object-fit: cover;
   cursor: pointer;
@@ -240,35 +281,25 @@
 
 .railwrapper1 {
   position: relative;
-  width: 5rem;
-  height: 100vh;
+  width: 100vh;
+  height: 20vh;
   white-space: normal;
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
-  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+  
 
 }
 
-.railwrapper2 {
-  position: absolute;
-  width: 5rem;
-  height: 100vh;
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
-  overflow: hidden;
-}
+
 .railtext {
   position: absolute;
   top: 50%;
-  left: 80%;
+  left: 0%;
   width: 100vh;
   z-index: 10;
   font-size: 12.5rem;
-  animation: railwrapper1 20s linear infinite;
+  animation: railwrapper1 10s linear infinite;
 
 }
 @keyframes railwrapper1 {
@@ -277,7 +308,7 @@
    
   }
   100% {
-    transform: translate(-300%, 0) ;
+    transform: translate(-100vh, 0) ;
     
   }
 }

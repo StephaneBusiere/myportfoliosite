@@ -1,34 +1,32 @@
 .headerWrapper {
-    position: relative;
-    width: 5rem;
-    height: 100vh;
+    
+    width: 2rem;
+    height: 5vh;
     white-space: normal;
     display: inline-block;
     vertical-align: top;
   }
  
   header {
-    position: absolute;
-    top: 50%;
-    left: 80%;
+    position: fixed;
+    top: 0%;
+    left: 30%;
     width: 100vh;
     z-index: 10;
-    transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+   
     
   }
   header[data-active='true'] {
     box-shadow: 0 2px 8px rgba(152,168,188,.2);
-    display: none;
+    
   }
-  .headerSticky {
-      background-color: rgb(199, 42, 42);
-  }
+  
   .headerMenu {
     padding: 0;
     list-style: none;
     border-bottom: 1px solid #aaa;
     font-size: .875rem;
-    margin: 2.5rem;
+    
   }
   .headerMenuitem {
     display: inline-block;
