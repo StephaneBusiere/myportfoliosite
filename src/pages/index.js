@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "gatsby"
 import Slide from 'react-reveal/Slide'; 
-
 import StarfieldAnimation from 'react-starfield-animation'
 import styles from "./home.module.css"
 import sprite from '../images/sprite.svg'
@@ -10,11 +9,15 @@ import hacker from '../images/hacker.jpg'
 import work from '../images/eye.jpg'
 import stefVideo from '../images/matrixStefvideo.mp4'
 import Draggable from 'react-draggable';
-
+import Header from '../Header'
 
 
 
 class Example extends Component {
+ 
+ 
+ 
+ 
   render () {
     return (
       <div className={styles.outerwrapper}>
@@ -22,25 +25,15 @@ class Example extends Component {
       <div className={styles.slide1}>
       
       <img className={styles.hacker} src={hacker} />
-      <Link to="#aboutmesection"  className={styles.knowmore}>about me</Link>
-      <div className={styles.headerWrapper}>
-      <div className={styles.header}>
-      <ul className={styles.headerMenu}>
-      <li className={styles.headerMenuitem}>About</li>
-      <li className={styles.headerMenuitem}>Work</li>
-      <li className={styles.headerMenuitem}>Study</li>
-      <li className={styles.headerMenuitem}>Contact</li>
-      <li className={styles.headerMenuItemTitle}>Busiere Stéphane</li>
-      </ul>
-      </div>
-      </div>
-      <div className={styles.intro}>
+      <Link to="#intro" state={{scrolled:true}} className={styles.knowmore}>WHO I AM ?</Link>
+     <Header/>
+      <div id="intro" className={styles.intro}>
       <p className={styles.introText}>
       As a junior front-end developer, i want to get hire by a entreprise where i can grow my skills and be confortable in a long term adventure.
       I know that for a recruter it's not easy to hire a junior developer, you don't know what i am capable of and who i really am.
-      it's 
+      it's ...
   </p>
-  <div className={styles.introLinesContainer1}>
+  <div  className={styles.introLinesContainer1}>
   <div className={styles.introLines}>
   <span>A</span>
   
@@ -70,15 +63,15 @@ class Example extends Component {
       
       <div id="aboutmesection" className={styles.slide2}>
       <div className={styles.stefPhotosContainer}>
-    <Slide bottom>
+   
     <img className={styles.stefPhoto2} src={stef} />
-    </Slide>
+   
     
       
       <Slide right>
       <Draggable>
       
-      <img className={styles.hidePhoto} src={work} />
+      <img  draggable={false} className={styles.hidePhoto} src={work} />
       
       </Draggable>
       </Slide>
@@ -89,7 +82,12 @@ class Example extends Component {
       <object className={styles.sprite}  data={sprite}>svg-animation</object>
       <p className={styles.why}>WHY YOU CAN TRUST ME ?</p>
       </div>
-     
+      <div className={styles.slide4}>
+      <div className={styles.railwrapper1}>
+      <span className={styles.railtext}>HONESTY-HONESTY-HONESTY-HONESTY</span>
+      </div>
+      
+      </div>
       </div>
      
       

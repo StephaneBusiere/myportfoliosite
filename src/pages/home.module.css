@@ -1,12 +1,12 @@
 
 .outerwrapper {
   width: 100vh;
-  height: 100vw;
+  height: 4000px;
   transform: rotate(-90deg)translateX(-100vh);
   transform-origin: top left;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
-  position: absolute;
+  position: relative;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -14,7 +14,7 @@
   display: none;
 }
 .container {
-  width: 100%;
+  width: 100vh;
   height: 1100px;
   display: flex;
   flex-direction: row;
@@ -79,6 +79,7 @@
   
   animation-duration: 1s;
   animation-name: myanim;
+  
 }
 
 .knowmore:hover {
@@ -181,18 +182,6 @@
 
 }
  
-.test {
-  width: 600px;
-  height: 600px;
-  background-color: rgb(7, 19, 131);
-  margin:  auto;
-}
-
-.videoContainer {
-  min-height: 1000px;
-  position: relative;
-  overflow: hidden;
-}
 
 .hacker {
   
@@ -211,9 +200,20 @@
   width: 80%;
   z-index: 1;
   object-fit: cover;
+  position: relative;
+  
+ 
   
 }
+/*.stefPhoto2:hover {
+  transform: translate3d(-16.5967px, 0px, 0px);
+  transition-delay: .1s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-duration: 1s;
+  position: relative;
+  z-index: 1;
 
+}*/
 .stefPhotosContainer {
   position: relative;
   width: 1500px;
@@ -224,53 +224,65 @@
   top:240px;
   height: 35%;
   width: 25%;
-  z-index: 1;
+  z-index: 6;
   object-fit: cover;
   cursor: pointer;
 }
-.headerWrapper {
+
+.slide4 {
+  width: 14vw;
+  height: 100vh;
+  background-color: #EEEEEE ;
+  position: relative;
+  
+  
+}
+
+.railwrapper1 {
   position: relative;
   width: 5rem;
   height: 100vh;
   white-space: normal;
   display: inline-block;
   vertical-align: top;
+  white-space: nowrap;
+  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+
 }
 
-.header {
+.railwrapper2 {
+  position: absolute;
+  width: 5rem;
+  height: 100vh;
+  white-space: normal;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+  overflow: hidden;
+}
+.railtext {
   position: absolute;
   top: 50%;
   left: 80%;
   width: 100vh;
   z-index: 10;
-  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+  font-size: 12.5rem;
+  animation: railwrapper1 20s linear infinite;
+
 }
-.headerMenu {
-  padding: 0;
-  list-style: none;
-  border-bottom: 1px solid #aaa;
-  font-size: .875rem;
-  margin: 2.5rem;
+@keyframes railwrapper1 {
+  0% {
+    transform: translate(0, 0) ;
+   
+  }
+  100% {
+    transform: translate(-300%, 0) ;
+    
+  }
 }
-.headerMenuitem {
-  display: inline-block;
-  position: relative;
-  padding: 1.25rem 0;
-  margin: 0 1.25rem;
-  color: #1e1e1e;
-}
-.headerMenuItemTitle {
-  position: absolute;
-  top: 50%;
-  right: 2.5rem;
-  transform: translateY(-50%);
-  width: 20rem;
-  height: 2.5rem;
-  display: block;
-  color: #1e1e1e;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
+
+
 .stefVideo {
   position:absolute;
   left:0;
