@@ -4,21 +4,25 @@
   height: 4000px;
   transform: rotate(-90deg)translateX(-100vh);
   transform-origin: top left;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
+  overflow: scroll;
+ 
+  position: absolute;
+  display: block;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  
+ 
 }
 ::-webkit-scrollbar {
   display: none;
 }
 .container {
-  width: 100vh;
+  width: 700vw;
   height: 1100px;
   display: flex;
   flex-direction: row;
-  width: 400vw;
+ 
+  
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 
@@ -26,7 +30,7 @@
   
 }
 .slide1 {
-  width: 110vw;
+  width: 142vw;
   height: 100vh;
   /*background-image: url('../images/astronomy.jpg'); */
   
@@ -87,6 +91,114 @@
   background-color: rgba(24, 221, 195, 0.75);
 
 }
+.headerWrapper {
+  position: relative;
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+  white-space: normal;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: top;
+  z-index: 100;
+  
+
+}
+
+header {
+  position: absolute;
+  
+  top: 50%;
+  left: 80%;
+  width: 100vh;
+  z-index: 10;
+  transform:  translate3d(-50.5%,-50%,0) rotate(-90deg);
+  
+}
+
+
+.headerMenu {
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #aaa;
+  font-size: .875rem;
+  margin: 2.5rem;
+  z-index: 100;
+}
+.headerMenuitem {
+  display: inline-block;
+  position: relative;
+  padding: 1.25rem 0;
+  margin: 0 1.25rem;
+  color: #1e1e1e;
+}
+.headerMenuItemTitle {
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2.5rem;
+  display: block;
+  color: #1e1e1e;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.headerWrapperSticky {
+  position: absolute;
+  top: 0;
+  width: 5rem;
+  height: 100vh;
+  white-space: normal;
+ 
+  background-color: #fff;
+  vertical-align: top;
+  z-index: 100;
+  
+
+}
+.headerSticky {
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  left: 80%;
+  width: 100vh;
+  z-index: 10;
+  transform:  translate3d(-50.5%,-50%,0) rotate(-90deg);
+  
+}
+
+
+.headerMenuSticky {
+  padding: 0;
+  height: 2.7rem;
+  list-style: none;
+  background-color: #fff;
+  border-bottom: 1px solid #aaa;
+  font-size: .875rem;
+  margin: 2.5rem;
+  z-index: 100;
+}
+.headerMenuitemSticky {
+  display: inline-block;
+  position: relative;
+  padding: 1.25rem 0;
+  margin: 0 1.25rem;
+  color: #1e1e1e;
+}
+.headerMenuItemTitleSticky {
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  transform: translateY(-50%);
+  width: 20rem;
+  height: 2.5rem;
+  display: block;
+  color: #1e1e1e;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 
 .slide2 {
   width: 60vw;
@@ -117,7 +229,7 @@
   vertical-align: top;
   position: absolute;
   top: 30px;
-  left: 15%;
+  left: 1400px;
 
 }
 .introLinesContainer2 {
@@ -126,7 +238,7 @@
   height: 100vh;
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 1100px;
 }
 .introLinesContainer3 {
   display: inline-block;
@@ -135,7 +247,7 @@
   vertical-align: top;
   position: absolute;
   top: 60%;
-  left: 12%;
+  left: 1000px;
 }
 .introLinesContainer4 {
   display: inline-block;
@@ -144,7 +256,7 @@
   vertical-align: top;
   position: absolute;
   top: 60%;
-  left: 19%;
+  left: 1500px;
 }
 .introLines {
   text-align: center;
@@ -152,13 +264,13 @@
   line-height: .9;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 30vh;
+  font-size: 32vh;
   transform: translate3d(-0.0688912px, 0px, 0px);
   transition: transform 1.4s cubic-bezier(.165,.84,.44,1);
 
 }
 .slide3 {
-  width: 40vw;
+  width: 30vw;
   height: 100vh;
   background-color:#EEEEEE;
   position: relative;
@@ -170,19 +282,48 @@
     color: black;
     position: absolute;
     top: 5%;
-    left: -10%;
+    left: -20%;
     z-index: 2;
+    
 }
 
 .why { 
   position: absolute;
   top: 48%;
-  Left: 20%;
+  Left: 6%;
   font-size: 20px;
 
 }
+.transparentDiv {
+  
+  width: 30000px;
+  height: 1000px;
+  position: absolute;
+  top: 0;
+
+}
+.about { 
+  position: absolute;
+  top: 60%;
+  Left: 80%;
+  font-size: 20px;
+
  
 
+}
+.aboutLine { 
+  position: absolute;
+  top: 80%;
+  Left: 85%;
+  font-size: 20px;
+  width: 250px;
+  height: 1px;
+  background-color: black;
+  transform:  translate3d(-50.5%,-50%,0) rotate(-90deg);
+  
+
+
+}
 .hacker {
   
   left:0;
@@ -220,7 +361,7 @@
 }
 .hidePhoto {
   position: absolute;
-  left:520px;
+  left:450px;
   top:240px;
   height: 35%;
   width: 25%;
@@ -232,7 +373,7 @@
 .slide4 {
   width: 14vw;
   height: 100vh;
-  background-color: #EEEEEE ;
+  background-color: #FFFFFF ;
   position: relative;
   
   
@@ -246,29 +387,20 @@
   display: inline-block;
   vertical-align: top;
   white-space: nowrap;
-  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
+  transform: translate3d(-50.5%,-50%,0) rotate(270deg);
 
 }
 
-.railwrapper2 {
-  position: absolute;
-  width: 5rem;
-  height: 100vh;
-  white-space: normal;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
-  transform: translate3d(-50.5%,-50%,0) rotate(-90deg);
-  overflow: hidden;
-}
+
 .railtext {
   position: absolute;
   top: 50%;
-  left: 80%;
+  left: -1150%;
   width: 100vh;
   z-index: 10;
-  font-size: 12.5rem;
-  animation: railwrapper1 20s linear infinite;
+  font-size: 12rem;
+  display: inline-block;
+  /*animation: railwrapper1 30s linear infinite;*/
 
 }
 @keyframes railwrapper1 {
@@ -282,7 +414,190 @@
   }
 }
 
+.slide5 {
+  width: 40vw;
+  height: 80vh;
+  margin-top: 100px;
+  border-left: 2px solid #D7D7D7;
+  border-right:  2px solid #D7D7D7;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.thingsTitle {
+  font-family: 'Playfair Display', serif;;
+  font-weight: 400;
+  font-size: 70px;
+  margin-left: 80px;
+  display: inline-block;
+  height: 40px;
 
+}
+.thingsTitle::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.slide6 {
+  width: 36vw;
+  height: 100vh;
+  margin-top: 0px;
+  border-right:  2px solid #D7D7D7;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.experienceTitle {
+  font-family: 'Playfair Display', serif;;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 20px;
+  margin-top: 120px;
+  color: #222222;
+  display: block;
+  height: 70px;
+  text-decoration: none;
+}
+.experienceTitle::before {
+  content: "" ;
+  width: 50px;
+  height: 1px;
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.experienceTitle:hover::before {
+  color: #FFFFFF;
+
+  
+}
+.experienceTitle:hover {
+  color: #FFFFFF;
+
+  
+}
+.studiesTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 20px;
+  margin-top: 0px;
+  height: 70px;
+  display: block;
+  color: #222222;
+  text-decoration: none;
+  
+}
+.studiesTitle::before {
+  content: "" ;
+  width: 50px;
+  height: 1px;
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.studiesTitle:hover::before {
+  color: #FFFFFF;}
+
+.studiesTitle:hover {
+  color: #FFFFFF;
+
+}
+.skillsTitle {
+  font-family: 'Playfair Display', serif;;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 20px;
+  margin-top: 0px;
+  height: 70px;
+  display: block;
+  color: #222222;
+  text-decoration: none;
+}
+
+.skillsTitle::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.skillsTitle:hover::before {
+  color: #FFFFFF;}
+
+.skillsTitle:hover {
+  color: #FFFFFF;
+
+}
+.workTitle {
+  font-family: 'Playfair Display', serif;;
+  font-weight: 400;
+  font-size: 60px;
+  margin-left: 20px;
+  margin-top: 0px;
+  display: block;
+  height: 70px;
+  color: #222222;
+  text-decoration: none;
+}
+.workTitle::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.workTitle:hover::before {
+  color: #FFFFFF;}
+
+.workTitle:hover {
+  color: #FFFFFF;
+
+}
+
+.experienceText {
+  width: 400px;
+  height: 200px;
+  margin-left: 80px;
+  
+
+}
+.pisteur {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.kayak {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 300px;
+  left: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.line4 {
+  width: 50px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 510px;
+  left: 15px;
+}
 .stefVideo {
   position:absolute;
   left:0;
@@ -293,7 +608,6 @@
   
 
 }
-
 .textPresentation {
   width: 860px;
   height: 600px;
