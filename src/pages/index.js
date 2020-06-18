@@ -108,7 +108,8 @@ else {
       <div className={styles.slide1}>
       
       <img className={styles.hacker} src={hacker} />
-      <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>WHO I AM ?</Link>
+    
+     <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>WHO I AM ?</Link>      
       <div className={styles.headerWrapper}  >
       
         <header   >
@@ -177,7 +178,7 @@ else {
   >
     <div className={styles.transparentDiv}></div>
     </VizSensor>
-      <Slide right>
+      <Slide bottom>
       <Draggable>
       
       <img  draggable={false} className={styles.hidePhoto} src={work} />
@@ -230,9 +231,9 @@ else {
       <div className={styles.futur}></div>
       </div>
       <div style={linkStyle} className={styles.slide6}>
-      
+      <Slide right>
       <Link to="#experience" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={ linkStyleExperience} className={styles.experienceTitle}>Experiences</Link>
-     
+      </Slide>
       
       <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Studies</Link>
       

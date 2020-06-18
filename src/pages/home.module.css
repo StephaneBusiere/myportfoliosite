@@ -73,24 +73,92 @@
   position: absolute;
   top: 75%;
   left: 3%;
-  ;
   padding: 15px;
   color: #1e1e1e;
-  
   z-index: 3;
   text-decoration: none;
   animation: fadein 1s;
-  
-  animation-duration: 1s;
-  animation-name: myanim;
+  transition: color 0.25s;
   
 }
-
-.knowmore:hover {
- 
-  background-color: rgba(24, 221, 195, 0.75);
-
+.knowmore:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: 2px solid transparent;
 }
+.knowmore:hover:before {
+  animation: animate 1s linear forwards;
+}
+@keyframes animate 
+{
+  0% {
+    width: 0;
+    height:0;
+  border-top-color: #262626;
+border-right-color: transparent; 
+border-bottom-color: transparent;
+border-left-color: transparent; }
+
+50% {
+  width: 100%;
+  height:0;
+border-top-color: #262626;
+border-right-color:  #262626; 
+border-bottom-color: transparent;
+border-left-color: transparent;
+}
+100% {
+  width: 100%;
+  height:100%;
+border-top-color:  #262626;
+border-right-color:  #262626; 
+border-bottom-color: transparent;
+border-left-color: transparent;
+}
+}
+.knowmore:after {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: 2px solid transparent;
+}
+.knowmore:hover:after {
+  animation: animate2 1s linear forwards;
+  animation-delay: 1s;
+}
+@keyframes animate2 
+{
+  0% {
+    width: 0;
+    height:0;
+  border-top-color: transparent;
+border-right-color: transparent; 
+border-bottom-color: transparent;
+border-left-color: #262626; }
+
+50% {
+  width: 0%;
+  height:100%;
+border-top-color: transparent;
+border-right-color: transparent; 
+border-bottom-color:#262626; 
+border-left-color: #262626;
+}
+100% {
+  width: 100%;
+  height:100%;
+border-top-color:  transparent;
+border-right-color: transparent ; 
+border-bottom-color: #262626;
+border-left-color: #262626;
+}
+}
+
 .headerWrapper {
   position: relative;
   top: 0;
@@ -102,7 +170,6 @@
   vertical-align: top;
   z-index: 100;
   
-
 }
 
 header {
