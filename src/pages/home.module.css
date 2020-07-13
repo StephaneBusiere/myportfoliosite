@@ -61,12 +61,6 @@
   100% { opacity:1; }
 }
 
-
-.logoSB {
-  width: 40rem;
- 
-}
-
 .knowmore {
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
@@ -515,6 +509,7 @@ header {
   border-right:  2px solid #D7D7D7;
   background-color: #FFFFFF;
   position: relative;
+  
 }
 
 .experienceTitle {
@@ -526,6 +521,7 @@ header {
   color: #222222;
   display: block;
   height: 70px;
+  
   text-decoration: none;
 }
 .experienceTitle::before {
@@ -604,7 +600,7 @@ header {
 
 }
 .workTitle {
-  font-family: 'Playfair Display', serif;;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 60px;
   margin-left: 20px;
@@ -638,13 +634,21 @@ header {
   
 
 }
-.pisteur {
+.pisteurContainer {
   width: 500px;
-  height: auto;
-  display: block;
+  height: 800px;
   margin: 0 auto;
   margin-top: 40px;
 }
+.pisteur {
+  width: 700px;
+  height: 800px;
+  object-fit:scale-down;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-image: url('../images/pisteur.jpg');
+}
+
 .kayak {
   width: 300px;
   height: auto;
@@ -655,8 +659,6 @@ header {
   margin: 0 auto;
 }
 
-
-
 .line4 {
   width: 50px;
   height: 1px;
@@ -665,22 +667,135 @@ header {
   top: 510px;
   left: 15px;
 }
-.stefVideo {
-  position:absolute;
-  left:0;
-  top:0;
-  height: 80%;
-  width: 5%;
-  object-fit: cover;
-  
+
+.slide7 {
+  width: 60vw;
+  height: 100vh;
+  margin-top: 0px;
+  border-right:  2px solid #D7D7D7;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.experienceTitleContainer {
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  width: 13.5rem;
+  height: 200px;
+  color: #1e1e1e;
+  z-index: 10;
+  position: absolute;
+  top: 40px;
+  left: 20px;
+}
+.pastexperiences {
+  color: whitesmoke;
+  position: absolute;
+  top: 78px;
+  left: 40px;
+  z-index:11;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 25px;
+}
+
+.experiences {
+  color: whitesmoke;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  z-index:11;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 25px;
+}
+
+.experiencesTextContainer {
+  width: 50rem;
+  height: 40rem;
+  position: absolute;
+  top: 30vh;
+  left: 50px;
+}
+
+.skiPatrolWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+.kayakerWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+}
+.skipatrol {
+font-size: 40px;
+font-family: 'Playfair Display',sans-serif;
+margin-bottom: 80px;
+cursor: pointer;
+}
+.skipatrol::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color:  black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.skipatrol:hover {
+  color: rgb(118, 181, 190);
+}
+.kayaker {
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.kayaker::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color:  black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.kayaker:hover {
+  color: rgb(118, 181, 190);
+}
+.guide {
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  margin-bottom: 80px;
+  cursor: pointer;
 
 }
-.textPresentation {
-  width: 860px;
-  height: 600px;
-  background-color: rgb(18, 172, 164);
-  position: absolute;
-  top: 1100px;
-  right:0;
+.guide::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color:  black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.guide:hover {
+  color: rgb(118, 181, 190);
+}
+.traveler {
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  cursor: pointer;
+}
+.traveler::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color:  black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  
+}
 
+.traveler:hover {
+  color: rgb(118, 181, 190);
 }

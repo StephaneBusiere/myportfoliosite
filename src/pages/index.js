@@ -15,26 +15,51 @@ import stefVideo from '../images/matrixStefvideo.mp4'
 import code from '../images/code.jpg'
 import oclock from '../images/oclock2.png'
 import studies from '../images/studies.jpg'
-
-
+import Skipatrol from '../SkiPatrolInfo'
+import Kayaker from '../KayakerInfo'
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
 import $ from "jquery";
 
 class Example extends Component {
- constructor(props) {
+ 
+ 
+ 
+  constructor(props) {
   super(props)
 	this.state = {
     hover: false,
     hoverStudies: false,
     hoverSkills: false,
-    hoverWork: false
+    hoverWork: false,
+    imgViz: false,
+    imgViz2: false,
+    when: false,
+    skiPatrolClick: false,
+    kayakerClick: false,
+
   }
+  
   this.toggleHover = this.toggleHover.bind(this);
   this.toggleHoverStudies = this.toggleHoverStudies.bind(this);
   this.toggleHoverSkills = this.toggleHoverSkills.bind(this);
   this.toggleHoverWork = this.toggleHoverWork.bind(this);
+  this.skiPatrolClick=this.skiPatrolClick.bind(this); 
+  this.crossClick=this.crossClick.bind(this);
+  this.kayakerClick=this.kayakerClick.bind(this);
 }
+
+
+  skiPatrolClick () {
+    this.setState({skiPatrolClick: !this.state.skiPatrolClick})
+  }
+  kayakerClick() {
+    this.setState({kayakerClick:!this.state.kayakerClick})
+  }
+  crossClick () {
+    this.setState ({skiPatrolClick:false, kayakerClick:false})
+    
+  }
   toggleHover() {
     this.setState({hover: !this.state.hover})
   }
@@ -53,8 +78,22 @@ class Example extends Component {
     let linkStyleSkills;
     let linkStyleWork;
     let linkStyleExperience;
+    const isPatrolTrue=this.state.skiPatrolClick
+    let SkipatrolShow
+    let KayakerShow
+    const isKayakerTrue=this.state.kayakerClick
+if (isPatrolTrue ) {
+  SkipatrolShow=<Skipatrol
+  crossClick={this.crossClick}
+  />
+} else {SkipatrolShow=''}
+if  (isKayakerTrue) {
+  KayakerShow=<Kayaker
+  crossClick={this.crossClick}
+  />
+} else {KayakerShow=''}
 
-    if (this.state.hover) {
+if (this.state.hover) {
       linkStyle = {backgroundImage: `url(${guatemala}`, objectFit: 'cover'};
       
       linkStyleStudies={opacity: 0};
@@ -164,16 +203,18 @@ else {
       opacity: this.state.imgViz ? 1 : 0.25,
       width: 1000,
       height: 928,
-      transition: 'opacity 500ms linear'
+      transition: 'opacity 500ms linear', 
+      
+
     }}
     />
     
     
     <VizSensor
     partialVisibility 
-    offset={{right:0}}
+   
     onChange={(isVisible) => {
-      this.setState({imgViz: isVisible, color:'pink'})
+      this.setState({imgViz: isVisible})
     }}
   >
     <div className={styles.transparentDiv}></div>
@@ -194,7 +235,7 @@ else {
       <p className={styles.about}>About </p>
       <div className={styles.aboutLine}></div>
       </div>
-     
+      
       <div className={styles.slide4}>
       <div className={styles.railwrapper1}>
       <span className={styles.railtext}>WHO I AM</span>
@@ -208,41 +249,99 @@ else {
       I had a life before becoming a junior developper.
       A life where my passion was also my work, where nature was my office and danger was my every day. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus vitae fugiat, earum minima magnam ex consectetur id reprehenderit iusto perspiciatis labore est quia nihil ipsa? Est tempora enim asperiores?
       </div>
+      <div className={styles.pisteurContainer}>
       <VizSensor
       
       
       onChange={(isVisible) => {
-        this.setState({imgViz2: isVisible, color:'pink'})
+        this.setState({imgViz: isVisible})
       }}
     >
-      <img className={styles.pisteur} src={pisteur} 
+      <div className={styles.pisteur} 
+      style={{
+       
+        
+        transform:  this.state.imgViz ? 'scale (1)' : 'scale(0.8)',
+       
+        transition: 'opacity 500ms linear',
+        transition: 'transform 5000ms linear'
+      }}>
+      
+      </div>
+      </VizSensor>
+      </div>
+      
+      <img className={styles.kayak} src={kayak} 
       style={{
         opacity: this.state.imgViz ? 1 : 0.25,
-        width: 500,
+        transform:  this.state.imgViz ? 'scale(1)' : 'scale(0.8)',
         height: 'auto',
-        transition: 'opacity 500ms linear'
+        transition: 'opacity 500ms linear',
+        transition: 'transform 5000ms linear'
       }}
-      
       />
-      </VizSensor>
-      <img className={styles.kayak} src={kayak} />
-      <div className={styles.study}></div>
-      <div className={styles.slills}></div>
-      <div className={styles.futur}></div>
       </div>
-      <div style={linkStyle} className={styles.slide6}>
-      <Slide right>
-      <Link to="#experience" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={ linkStyleExperience} className={styles.experienceTitle}>Experiences</Link>
+      
+      <VizSensor
+      
+      partialVisibility
+      onChange={(isVisible) => {
+        this.setState({imgViz2: isVisible})
+      }}
+    >
+      <div style={linkStyle} className={styles.slide6}
+      
+      >
+      
+    
+    
+      <Slide  right spy={this.state.imgViz2}  >
+      
+      
+      
+      <Link to="#experience" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={ linkStyleExperience} className={styles.experienceTitle} >Experiences</Link>
+      
+      </Slide>
+     
+
+    
+      <Slide  right spy={this.state.imgViz2} delay={500} >
+     
+      <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Studies</Link>
       </Slide>
       
-      <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Studies</Link>
-      
+
+
+    
+      <Slide  right spy={this.state.imgViz2} delay={700} >
       <Link onMouseEnter={this.toggleHoverSkills} onMouseLeave={this.toggleHoverSkills} style={linkStyleSkills} className={styles.skillsTitle}>Skills</Link>
+      </Slide>
       
+      
+      
+      <Slide  right spy={this.state.imgViz2} delay={900} >
       <Link onMouseEnter={this.toggleHoverWork} onMouseLeave={this.toggleHoverWork} style={linkStyleWork} className={styles.workTitle}>Work</Link>
+      </Slide>
       
-     
+      </div>
+      </VizSensor>
+      <div  className={styles.slide7}>
+      <div className={styles.experienceTitleContainer}></div>
+      <h3 className={styles.pastexperiences}>PAST</h3>
+      <h3 className={styles.experiences}>EXPERIENCES</h3>
       
+      <div className={styles.experiencesTextContainer}>
+      <div className={styles.skiPatrolWrapper}>
+      <div className={styles.skipatrol} onClick={this.skiPatrolClick}>Ski patrol</div>
+      <div>{SkipatrolShow}</div>
+      </div>
+      <div className={styles.kayakerWrapper}>
+      <div className={styles.kayaker} onClick={this.kayakerClick}>River Guide </div>
+      <div>{KayakerShow}</div>
+      </div>
+      <div className={styles.guide}>Turism product designer</div>
+      <div className={styles.traveler}>Traveler</div>
+      </div>
       </div>
       </div>
      
