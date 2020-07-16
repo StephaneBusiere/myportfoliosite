@@ -1,11 +1,12 @@
-.SkiPatrolInfoWrapper {
+.guideInfoWrapper {
     background-color: whitesmoke;
-    border: thin solid whitesmoke;
-    border-radius: 30px;
-    width: 600px;
-    height: 180px;
-    margin: -80px 0px 0px 40px;
-    position: relative;   
+   
+    width: 650px;
+    height: 220px;
+    margin: -80px 0px 0px 50px;
+    position: relative; 
+    overflow: hidden; 
+    z-index: 2;
 }
 
 
@@ -15,11 +16,11 @@
 }
 
 .IframeSki {
-    margin-left: 20px;
+    margin-left: 100px;
     margin-top: 30px;
 }
 .cross {
-    width: 30px;
+    width: 20px;
     position: absolute;
     top:5px;
     right: 10px;
@@ -38,5 +39,49 @@
 .skiMenuItem {
     font-size: 20px;
     font-family: 'Playfair Display',sans-serif;
-    margin: 5px 0px 5px 0px;
+    margin: 15px 0px 10px 0px;
+    list-style: none;
+}
+.skiMenuItem::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color:  black;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .summerIcon {
+    position: absolute;
+    top: 15px;
+    left:270px;
+    width: 40px;
+}
+
+
+.earthIcon {
+  position: absolute;
+  top: 60px;
+  left:270px;
+  width: 35px;
+ 
+}
+.kayakIcon {
+  position: absolute;
+  top: 90px;
+  left:271px;
+  width: 50px;
+}
+.raftingIcon {
+  position: absolute;
+  top: 130px;
+  left:271px;
+  width: 40px;
+}
+.rescueIcon {
+  position: absolute;
+  top: 170px;
+  left:271px;
+  width: 40px;
 }

@@ -242,7 +242,7 @@ header {
   z-index: 100;
 }
 .headerMenuitemSticky {
-  display: inline-block;
+  display: inline-block; 
   position: relative;
   padding: 1.25rem 0;
   margin: 0 1.25rem;
@@ -641,12 +641,12 @@ header {
   margin-top: 40px;
 }
 .pisteur {
-  width: 700px;
-  height: 800px;
-  object-fit:scale-down;
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
   margin: 0 auto;
   margin-top: 40px;
-  background-image: url('../images/pisteur.jpg');
+  
 }
 
 .kayak {
@@ -706,30 +706,54 @@ header {
   font-family: 'Playfair Display',sans-serif;
   font-size: 25px;
 }
-
+.studies {
+  color: whitesmoke;
+  position: absolute;
+  top: 100px;
+  left: 76px;
+  z-index:11;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 25px;
+}
 .experiencesTextContainer {
-  width: 50rem;
+  width: 70rem;
   height: 40rem;
   position: absolute;
   top: 30vh;
   left: 50px;
 }
-
+.presentationContainer {
+  width: 220px;
+  height: 300px;
+  background-color: whitesmoke;
+  position: absolute;
+  top:160px;
+  left: 500px;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 20px;
+  padding-left: 15px;
+}
 .skiPatrolWrapper {
   display: flex;
   flex-direction: row;
-  width: 900px;
+  width: 1200px;
 }
 .kayakerWrapper {
   display: flex;
   flex-direction: row;
-  width: 1000px;
+  width: 1200px;
+}
+.travelerWrapper {
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
 }
 .skipatrol {
 font-size: 40px;
 font-family: 'Playfair Display',sans-serif;
-margin-bottom: 80px;
+margin-bottom: 190px;
 cursor: pointer;
+width: 400px;
 }
 .skipatrol::before {
   content: "";
@@ -740,14 +764,28 @@ cursor: pointer;
   vertical-align: middle;
   margin-right: 10px;
 }
-.skipatrol:hover {
-  color: rgb(118, 181, 190);
+
+
+.question {
+  width: 40px;
+  height: auto;
+  margin: -185px 0px 0px -110px;
+  fill: black;
+  cursor: pointer;
+  
+}
+
+.question:hover {
+ 
+  fill: rgb(43, 107, 99);
+  
 }
 .kayaker {
   font-size: 40px;
   font-family: 'Playfair Display',sans-serif;
-  margin-bottom: 80px;
+  margin-bottom: 180px;
   cursor: pointer;
+  width: 400px;
 }
 .kayaker::before {
   content: "";
@@ -761,29 +799,14 @@ cursor: pointer;
 .kayaker:hover {
   color: rgb(118, 181, 190);
 }
-.guide {
-  font-size: 40px;
-  font-family: 'Playfair Display',sans-serif;
-  margin-bottom: 80px;
-  cursor: pointer;
 
-}
-.guide::before {
-  content: "";
-  width: 50px;
-  height: 1px;
-  background-color:  black;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-.guide:hover {
-  color: rgb(118, 181, 190);
-}
+
 .traveler {
   font-size: 40px;
   font-family: 'Playfair Display',sans-serif;
+  margin-bottom: 180px;
   cursor: pointer;
+  width: 400px;
 }
 .traveler::before {
   content: "";
@@ -796,6 +819,23 @@ cursor: pointer;
   
 }
 
-.traveler:hover {
-  color: rgb(118, 181, 190);
+
+.clock {
+  width: 650px;
+  height: 1200px;
+  margin-top: 0px;
+  margin-left: 430px;
+  background-image: url('../images/clock.jpg');
+  position: relative;
+  z-index:1 ;
+}
+.clock:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(30,30,30,.9);
+  z-index:1 ;
 }

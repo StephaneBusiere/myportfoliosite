@@ -15,8 +15,11 @@ import stefVideo from '../images/matrixStefvideo.mp4'
 import code from '../images/code.jpg'
 import oclock from '../images/oclock2.png'
 import studies from '../images/studies.jpg'
+import question from '../images/question.svg'
+import clock from '../images/clock.jpg'
 import Skipatrol from '../SkiPatrolInfo'
 import Kayaker from '../KayakerInfo'
+import Traveler from '../TravelerInfo'
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
 import $ from "jquery";
@@ -37,6 +40,7 @@ class Example extends Component {
     when: false,
     skiPatrolClick: false,
     kayakerClick: false,
+    travelerClick: false,
 
   }
   
@@ -47,6 +51,7 @@ class Example extends Component {
   this.skiPatrolClick=this.skiPatrolClick.bind(this); 
   this.crossClick=this.crossClick.bind(this);
   this.kayakerClick=this.kayakerClick.bind(this);
+  this.travelerClick=this.travelerClick.bind(this);
 }
 
 
@@ -55,6 +60,9 @@ class Example extends Component {
   }
   kayakerClick() {
     this.setState({kayakerClick:!this.state.kayakerClick})
+  }
+  travelerClick() {
+    this.setState({travelerClick:!this.state.travelerClick})
   }
   crossClick () {
     this.setState ({skiPatrolClick:false, kayakerClick:false})
@@ -82,17 +90,24 @@ class Example extends Component {
     let SkipatrolShow
     let KayakerShow
     const isKayakerTrue=this.state.kayakerClick
+    let TravelerShow
+    const isTravelerTrue=this.state.travelerClick
 if (isPatrolTrue ) {
   SkipatrolShow=<Skipatrol
   crossClick={this.crossClick}
   />
 } else {SkipatrolShow=''}
+
 if  (isKayakerTrue) {
   KayakerShow=<Kayaker
   crossClick={this.crossClick}
   />
 } else {KayakerShow=''}
-
+if  (isTravelerTrue) {
+  TravelerShow=<Traveler
+  crossClick={this.crossClick}
+  />
+} else {TravelerShow=''}
 if (this.state.hover) {
       linkStyle = {backgroundImage: `url(${guatemala}`, objectFit: 'cover'};
       
@@ -249,6 +264,12 @@ else {
       I had a life before becoming a junior developper.
       A life where my passion was also my work, where nature was my office and danger was my every day. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus vitae fugiat, earum minima magnam ex consectetur id reprehenderit iusto perspiciatis labore est quia nihil ipsa? Est tempora enim asperiores?
       </div>
+      <div  className={styles.presentationContainer}>
+      <p>Age:42</p>
+      <p>Nationality: French</p>
+      <p>Location: South Alpes</p>
+      <p></p>
+      </div>
       <div className={styles.pisteurContainer}>
       <VizSensor
       
@@ -257,7 +278,8 @@ else {
         this.setState({imgViz: isVisible})
       }}
     >
-      <div className={styles.pisteur} 
+      <img className={styles.pisteur} 
+      src={pisteur}
       style={{
        
         
@@ -267,7 +289,7 @@ else {
         transition: 'transform 5000ms linear'
       }}>
       
-      </div>
+      </img>
       </VizSensor>
       </div>
       
@@ -325,23 +347,72 @@ else {
       
       </div>
       </VizSensor>
-      <div  className={styles.slide7}>
+      <div id='experience' className={styles.slide7}>
       <div className={styles.experienceTitleContainer}></div>
       <h3 className={styles.pastexperiences}>PAST</h3>
       <h3 className={styles.experiences}>EXPERIENCES</h3>
       
-      <div className={styles.experiencesTextContainer}>
+      <div  className={styles.experiencesTextContainer}>
       <div className={styles.skiPatrolWrapper}>
-      <div className={styles.skipatrol} onClick={this.skiPatrolClick}>Ski patrol</div>
-      <div>{SkipatrolShow}</div>
+      <div className={styles.skipatrol} >Ski patrol</div>
+      <svg className={styles.question} onClick={this.skiPatrolClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="33px" height="33px" viewBox="0 0 33 33" >
+   <g>
+     <path d="M21.57,8.668c0.851,0.75,1.275,2.143,1.275,4.178c0,1.605-0.209,2.73-0.628,3.373c-0.419,0.641-1.346,1.266-2.78,1.875
+       c-1.396,0.588-2.098,1.383-2.098,2.381v0.457h-3.308c0-1.617,0.157-2.684,0.47-3.201c0.314-0.52,1.137-1.055,2.468-1.604
+       l1.27-0.541c1.056-0.438,1.582-1.321,1.582-2.651c0-1.104-0.196-1.814-0.592-2.134c-0.395-0.317-1.275-0.479-2.646-0.479
+       c-1.284,0-2.14,0.171-2.567,0.509c-0.428,0.336-0.642,1.01-0.642,2.019l0.015,0.739h-3.237l0.014-0.711
+       c0-2.104,0.452-3.517,1.355-4.244c0.903-0.728,2.667-1.09,5.29-1.09C19.134,7.541,20.719,7.916,21.57,8.668z M14.033,27.176h3.265
+       v-3.508h-3.265V27.176z M33,16.5C33,25.598,25.598,33,16.5,33C7.402,33,0,25.598,0,16.5C0,7.402,7.402,0,16.5,0
+       C25.598,0,33,7.402,33,16.5z M29,16.5C29,9.607,23.393,4,16.5,4C9.607,4,4,9.607,4,16.5C4,23.393,9.607,29,16.5,29
+       C23.393,29,29,23.393,29,16.5z"/>
+   </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+     
+      {SkipatrolShow}
       </div>
-      <div className={styles.kayakerWrapper}>
-      <div className={styles.kayaker} onClick={this.kayakerClick}>River Guide </div>
-      <div>{KayakerShow}</div>
+      
+      <div  className={styles.kayakerWrapper}>
+      <div className={styles.kayaker}  >River Guide</div>
+      <svg className={styles.question} onClick={this.kayakerClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="33px" height="33px" viewBox="0 0 33 33" >
+   <g>
+     <path d="M21.57,8.668c0.851,0.75,1.275,2.143,1.275,4.178c0,1.605-0.209,2.73-0.628,3.373c-0.419,0.641-1.346,1.266-2.78,1.875
+       c-1.396,0.588-2.098,1.383-2.098,2.381v0.457h-3.308c0-1.617,0.157-2.684,0.47-3.201c0.314-0.52,1.137-1.055,2.468-1.604
+       l1.27-0.541c1.056-0.438,1.582-1.321,1.582-2.651c0-1.104-0.196-1.814-0.592-2.134c-0.395-0.317-1.275-0.479-2.646-0.479
+       c-1.284,0-2.14,0.171-2.567,0.509c-0.428,0.336-0.642,1.01-0.642,2.019l0.015,0.739h-3.237l0.014-0.711
+       c0-2.104,0.452-3.517,1.355-4.244c0.903-0.728,2.667-1.09,5.29-1.09C19.134,7.541,20.719,7.916,21.57,8.668z M14.033,27.176h3.265
+       v-3.508h-3.265V27.176z M33,16.5C33,25.598,25.598,33,16.5,33C7.402,33,0,25.598,0,16.5C0,7.402,7.402,0,16.5,0
+       C25.598,0,33,7.402,33,16.5z M29,16.5C29,9.607,23.393,4,16.5,4C9.607,4,4,9.607,4,16.5C4,23.393,9.607,29,16.5,29
+       C23.393,29,29,23.393,29,16.5z"/>
+   </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+      {KayakerShow}
       </div>
-      <div className={styles.guide}>Turism product designer</div>
+      <div className={styles.travelerWrapper}>
       <div className={styles.traveler}>Traveler</div>
+      <svg className={styles.question} onClick={this.travelerClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      width="33px" height="33px" viewBox="0 0 33 33" >
+   <g>
+     <path d="M21.57,8.668c0.851,0.75,1.275,2.143,1.275,4.178c0,1.605-0.209,2.73-0.628,3.373c-0.419,0.641-1.346,1.266-2.78,1.875
+       c-1.396,0.588-2.098,1.383-2.098,2.381v0.457h-3.308c0-1.617,0.157-2.684,0.47-3.201c0.314-0.52,1.137-1.055,2.468-1.604
+       l1.27-0.541c1.056-0.438,1.582-1.321,1.582-2.651c0-1.104-0.196-1.814-0.592-2.134c-0.395-0.317-1.275-0.479-2.646-0.479
+       c-1.284,0-2.14,0.171-2.567,0.509c-0.428,0.336-0.642,1.01-0.642,2.019l0.015,0.739h-3.237l0.014-0.711
+       c0-2.104,0.452-3.517,1.355-4.244c0.903-0.728,2.667-1.09,5.29-1.09C19.134,7.541,20.719,7.916,21.57,8.668z M14.033,27.176h3.265
+       v-3.508h-3.265V27.176z M33,16.5C33,25.598,25.598,33,16.5,33C7.402,33,0,25.598,0,16.5C0,7.402,7.402,0,16.5,0
+       C25.598,0,33,7.402,33,16.5z M29,16.5C29,9.607,23.393,4,16.5,4C9.607,4,4,9.607,4,16.5C4,23.393,9.607,29,16.5,29
+       C23.393,29,29,23.393,29,16.5z"/>
+   </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+   
+   {TravelerShow}
+   
+   </div>
       </div>
+      <div className={styles.clock} > </div>
+      </div>
+      <div id='experience' className={styles.slide7}>
+      <div className={styles.experienceTitleContainer}></div>
+      
+      <h3 className={styles.studies}>STUDIES</h3>
+
       </div>
       </div>
      
@@ -352,14 +423,4 @@ else {
   }
 }
 export default Example
-{
-/*<StarfieldAnimation
-      
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '800px',
-          zIndex: '1',
-        }}
-        numParticles={1000} 
-      />*/}
+
