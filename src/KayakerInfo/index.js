@@ -19,11 +19,11 @@ export default class Kayaker extends React.Component{
           
             <div className={styles.IframeSkiContainer}>
             <ul >
-            <li className={styles.skiMenuItem}>20 summer seasons<img className={styles.summerIcon} src={summer} ></img></li>
-            <li className={styles.skiMenuItem}>10 countries<img className={styles.earthIcon} src={earth} ></img></li>
-            <li className={styles.skiMenuItem}>Kayak instructor<img className={styles.kayakIcon} src={kayak} ></img></li>
-            <li className={styles.skiMenuItem}>Rafting instructor<img className={styles.raftingIcon} src={rafting} ></img></li>
-            <li className={styles.skiMenuItem}>Rescue specialist<img className={styles.rescueIcon} src={rescue} ></img></li>
+            <li className={styles.skiMenuItem}>20 saisons d'été<img className={styles.summerIcon} src={summer} ></img></li>
+            <li className={styles.skiMenuItem}>10 pays<img className={styles.earthIcon} src={earth} ></img></li>
+            <li className={styles.skiMenuItem}>moniteur de kayak<img className={styles.kayakIcon} src={kayak} ></img></li>
+            <li className={styles.skiMenuItem}>moniteur de rafting<img className={styles.raftingIcon} src={rafting} ></img></li>
+            <li className={styles.skiMenuItem}>Secouriste<img className={styles.rescueIcon} src={rescue} ></img></li>
             </ul>
             <iframe className={styles.IframeSki} width="270" height="170" src="https://www.youtube.com/embed/Il0WMxOUP1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -17,9 +17,28 @@ import oclock from '../images/oclock2.png'
 import studies from '../images/studies.jpg'
 import question from '../images/question.svg'
 import clock from '../images/clock.jpg'
+import html from '../images/html.jpg'
+import css from '../images/css.png'
+import php from '../images/php.svg'
+import js from '../images/es6.png'
+import react from '../images/react.png'
+import laravel from '../images/laravel.png'
+import bootstrap from '../images/bootstrap.png'
+import wordpress from '../images/icon-wordpress.png'
+import sql from '../images/sql.jpg'
+import git from '../images/git.jpg'
+import redux from '../images/redux.png'
+
+
+
+
+
 import Skipatrol from '../SkiPatrolInfo'
 import Kayaker from '../KayakerInfo'
 import Traveler from '../TravelerInfo'
+import cockpit from '../images/cockpit.png'
+import logoOclock from '../images/logo-oclock.jpg'
+import languages from '../images/languages.png'
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
 import $ from "jquery";
@@ -149,9 +168,9 @@ else {
       
         <header   >
         <ul className={styles.headerMenuSticky}>
-        <li className={styles.headerMenuitemSticky}>About</li>
-        <li className={styles.headerMenuitemSticky}>Work</li>
-        <li className={styles.headerMenuitemSticky}>Study</li>
+        <li className={styles.headerMenuitemSticky}>A propos</li>
+        <li className={styles.headerMenuitemSticky}>Réalisations</li>
+        <li className={styles.headerMenuitemSticky}>Etudes</li>
         <li className={styles.headerMenuitemSticky}>Contact</li>
         <li className={styles.headerMenuItemTitleSticky}>Busiere Stéphane</li>
         </ul>
@@ -163,14 +182,14 @@ else {
       
       <img className={styles.hacker} src={hacker} />
     
-     <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>WHO I AM ?</Link>      
+     <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>QUI SUIS JE ?</Link>      
       <div className={styles.headerWrapper}  >
       
         <header   >
         <ul className={styles.headerMenu}>
-        <li className={styles.headerMenuitem}>About</li>
-        <li className={styles.headerMenuitem}>Work</li>
-        <li className={styles.headerMenuitem}>Study</li>
+        <li className={styles.headerMenuitem}>A propos</li>
+        <li className={styles.headerMenuitem}>Réalisations</li>
+        <li className={styles.headerMenuitem}>Etudes</li>
         <li className={styles.headerMenuitem}>Contact</li>
         <li className={styles.headerMenuItemTitle}>Busiere Stéphane</li>
         </ul>
@@ -184,7 +203,7 @@ else {
   </p>
   <div  className={styles.introLinesContainer1}>
   <div className={styles.introLines}>
-  <span>A</span>
+  <span>Une</span>
   
   </div>
   </div>
@@ -196,13 +215,13 @@ else {
   </div>
   <div className={styles.introLinesContainer3}>
   <div className={styles.introLines}>
-  <span>OF</span>
+  <span>de</span>
   
   </div>
   </div>
   <div className={styles.introLinesContainer4}>
   <div className={styles.introLines}>
-  <span>TRUST</span>
+  <span>confiance</span>
   
   </div>
   </div>
@@ -246,19 +265,19 @@ else {
       </div>
       <div className={styles.slide3}>
       <object className={styles.sprite}  data={sprite}>svg-animation</object>
-      <p className={styles.why}>WHY YOU CAN TRUST ME ?</p>
+      <p className={styles.why}>POURQUOI ME FAIRE CONFIANCE ?</p>
       <p className={styles.about}>About </p>
       <div className={styles.aboutLine}></div>
       </div>
       
       <div className={styles.slide4}>
       <div className={styles.railwrapper1}>
-      <span className={styles.railtext}>WHO I AM</span>
+      <span className={styles.railtext}>QUI SUIS JE</span>
       </div>
       
       </div>
       <div  className={styles.slide5}>
-      <h2 className={styles.thingsTitle}>I am many things</h2>
+      <h2 className={styles.thingsTitle}>Je suis multiple</h2>
       <div className={styles.line}></div>
       <div id="aboutme" className={styles.experienceText}>
       I had a life before becoming a junior developper.
@@ -266,8 +285,8 @@ else {
       </div>
       <div  className={styles.presentationContainer}>
       <p>Age:42</p>
-      <p>Nationality: French</p>
-      <p>Location: South Alpes</p>
+      <p>Nationalité: Français</p>
+      <p>Lieux: Alpes du sud</p>
       <p></p>
       </div>
       <div className={styles.pisteurContainer}>
@@ -329,32 +348,32 @@ else {
     
       <Slide  right spy={this.state.imgViz2} delay={500} >
      
-      <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Studies</Link>
+      <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Etudes</Link>
       </Slide>
       
 
 
     
       <Slide  right spy={this.state.imgViz2} delay={700} >
-      <Link onMouseEnter={this.toggleHoverSkills} onMouseLeave={this.toggleHoverSkills} style={linkStyleSkills} className={styles.skillsTitle}>Skills</Link>
+      <Link onMouseEnter={this.toggleHoverSkills} onMouseLeave={this.toggleHoverSkills} style={linkStyleSkills} className={styles.skillsTitle}>Compétences</Link>
       </Slide>
       
       
       
       <Slide  right spy={this.state.imgViz2} delay={900} >
-      <Link onMouseEnter={this.toggleHoverWork} onMouseLeave={this.toggleHoverWork} style={linkStyleWork} className={styles.workTitle}>Work</Link>
+      <Link onMouseEnter={this.toggleHoverWork} onMouseLeave={this.toggleHoverWork} style={linkStyleWork} className={styles.workTitle}>Réalisations</Link>
       </Slide>
       
       </div>
       </VizSensor>
       <div id='experience' className={styles.slide7}>
       <div className={styles.experienceTitleContainer}></div>
-      <h3 className={styles.pastexperiences}>PAST</h3>
-      <h3 className={styles.experiences}>EXPERIENCES</h3>
+      <h3 className={styles.pastexperiences}>EXPERIENCES</h3>
+      <h3 className={styles.experiences}>PASSEES</h3>
       
       <div  className={styles.experiencesTextContainer}>
       <div className={styles.skiPatrolWrapper}>
-      <div className={styles.skipatrol} >Ski patrol</div>
+      <div className={styles.skipatrol} >Pisteur</div>
       <svg className={styles.question} onClick={this.skiPatrolClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
       width="33px" height="33px" viewBox="0 0 33 33" >
    <g>
@@ -372,7 +391,7 @@ else {
       </div>
       
       <div  className={styles.kayakerWrapper}>
-      <div className={styles.kayaker}  >River Guide</div>
+      <div className={styles.kayaker}  >Guide</div>
       <svg className={styles.question} onClick={this.kayakerClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
       width="33px" height="33px" viewBox="0 0 33 33" >
    <g>
@@ -388,7 +407,7 @@ else {
       {KayakerShow}
       </div>
       <div className={styles.travelerWrapper}>
-      <div className={styles.traveler}>Traveler</div>
+      <div className={styles.traveler}>Voyageur</div>
       <svg className={styles.question} onClick={this.travelerClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
       width="33px" height="33px" viewBox="0 0 33 33" >
    <g>
@@ -408,19 +427,66 @@ else {
       </div>
       <div className={styles.clock} > </div>
       </div>
-      <div id='experience' className={styles.slide7}>
-      <div className={styles.experienceTitleContainer}></div>
+      <div id='experience' className={styles.slide8}>
+      <div className={styles.studiesTitleContainer}></div>
       
-      <h3 className={styles.studies}>STUDIES</h3>
+      <h3 className={styles.studies}>Etudes</h3>
+      <img className={styles.cockpit} src={cockpit} />
+      <img className={styles.logoOclock} src={logoOclock} />
+      <img className={styles.languages} src={languages} />
+      <div className={styles.studiesContainer}> 
+      <p>Aprés 6 mois de formation en autodidacte, j'ai choisi l'école O'clock et son format en téléprésentiel addapté à mon envie de travailler en full remote.
+      La formation de 7 mois (1000h), aussi labellisée « Grande École du Numérique », se décompose de la sorte : </p>
+      <p>Le « Socle » de 3 mois apportant les bases du développement avec les technologies HTML5, CSS3, JavaScript, PHP et MySQL suivi d'une spécialisation au choix.</p>
+      <p>J'ai eu la chance de faire deux spécialisations de 2 mois: </p>
+      <p>Spécialisation ReactJS :</p>
+      <p>Création d'un modèle d’installation / mise à niveau en JS ES6/ React router / Axios / Redux / webpack / les hooks / consomation d'une REST API  </p>
+      <p>Spécialisation Wordpress :</p>
+      <p>découverte de WordPress, gestion du workflow en milieu professionnel avec Webpack, Composer et NPM) / configuration de WordPress pour une installation personnalisée custom / mise en place de Webpack pour compiler les fichiers afin de les regrouper en un seul / notions avancées autour des thèmes et plugins /création de plugins simples / principes avancés autour de WordPress et mise en production (REST API, déploiement etc).  </p>
+      <p>Deux projets d'apothéose de 1 mois par équipe en méthode agile: cahier des charges, modélisation de la BDD, wireframes.</p>
+    
+    
+      </div>
 
+      </div>
+      <div className={styles.slide9}>
+      <div className={styles.experienceTitleContainer}></div>
+      <h3 className={styles.experiences}>compétences</h3>
+      <div className={styles.competencesContainer}>
+      
+      <div className={styles.languagesContainer} >
+      <p className={styles.competencesText}>Languages</p>
+      <img className={styles.html} src={html} />
+      <img className={styles.css} src={css} />
+      <img className={styles.php} src={php} />
+      <img className={styles.sql} src={sql} />
+      <img className={styles.js} src={js} />
+      </div>
+      <div className={styles.frameworkContainer}>
+      <p className={styles.competencesText}>Framework</p>
+      <img className={styles.react} src={react} />
+      <img className={styles.laravel} src={laravel} />
+      <img className={styles.bootstrap} src={bootstrap} />
+      
+      </div>
+      <div className={styles.frameworkContainer}>
+      <p className={styles.competencesText}>Autres technos</p>
+      <img className={styles.wordpress} src={wordpress} />
+      <img className={styles.redux} src={redux} />
+      <img className={styles.git} src={git} />
+      
+      </div>
+      </div>
+      
       </div>
       </div>
      
       
       </div>
       </div>
+    
     )
   }
-}
+  }
 export default Example
 
