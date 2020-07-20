@@ -29,8 +29,10 @@ import sql from '../images/sql.jpg'
 import git from '../images/git.jpg'
 import redux from '../images/redux.png'
 import captureBoris from '../images/captureBorisDoye.png'
-
-
+import captureVerdon from '../images/captureecoleVerdon.png'
+import cockpit from '../images/cockpit.png'
+import logoOclock from '../images/logo-oclock.jpg'
+import languages from '../images/languages.png'
 
 
 
@@ -38,9 +40,9 @@ import Skipatrol from '../SkiPatrolInfo'
 import Kayaker from '../KayakerInfo'
 import Traveler from '../TravelerInfo'
 import BorisNodal from '../BorisNodal'
-import cockpit from '../images/cockpit.png'
-import logoOclock from '../images/logo-oclock.jpg'
-import languages from '../images/languages.png'
+import VerdonNodal from '../VerdonNodal'
+
+
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
 import $ from "jquery";
@@ -64,6 +66,7 @@ class Example extends Component {
     kayakerClick: false,
     travelerClick: false,
     borisNodalClick: false,
+    verdonNodalClick: false,
 
   }
   
@@ -76,6 +79,7 @@ class Example extends Component {
   this.kayakerClick=this.kayakerClick.bind(this);
   this.travelerClick=this.travelerClick.bind(this);
   this.borisNodalClick=this.borisNodalClick.bind(this);
+  this.verdonNodalClick=this.verdonNodalClick.bind(this);
 }
 
 
@@ -89,12 +93,16 @@ class Example extends Component {
     this.setState({travelerClick:!this.state.travelerClick})
   }
   crossClick () {
-    this.setState ({skiPatrolClick:false, kayakerClick:false,borisNodalClick:false} )
+    this.setState ({skiPatrolClick:false, kayakerClick:false,travelerClick:false,borisNodalClick:false, verdonNodalClick:false} )
     
   }
   borisNodalClick () {
     this.setState ({borisNodalClick:!this.state.borisNodalClick})
   }
+  verdonNodalClick () {
+    this.setState ({verdonNodalClick:!this.state.verdonNodalClick})
+  }
+
   toggleHover() {
     this.setState({hover: !this.state.hover})
   }
@@ -121,6 +129,8 @@ class Example extends Component {
     const isTravelerTrue=this.state.travelerClick
     let BorisNodalShow
     const isBorisNodalTrue=this.state.borisNodalClick
+    let VerdonNodalShow
+    const isVerdonNodalTrue=this.state.verdonNodalClick
 if (isPatrolTrue ) {
   SkipatrolShow=<Skipatrol
   crossClick={this.crossClick}
@@ -143,7 +153,11 @@ if  (isBorisNodalTrue) {
   crossClick={this.crossClick}
   />
 } else {BorisNodalShow=''}
-
+if  (isVerdonNodalTrue) {
+  VerdonNodalShow=<VerdonNodal
+  crossClick={this.crossClick}
+  />
+} else {VerdonNodalShow=''}
 
 
 
@@ -188,10 +202,11 @@ else {
       
         <header   >
         <ul className={styles.headerMenuSticky}>
-        <li className={styles.headerMenuitemSticky}>A propos</li>
-        <li className={styles.headerMenuitemSticky}>Réalisations</li>
-        <li className={styles.headerMenuitemSticky}>Etudes</li>
-        <li className={styles.headerMenuitemSticky}>Contact</li>
+        <Link to="#aboutme" className={styles.headerMenuitemSticky}>A propos</Link>
+        <Link to="#linkId8" className={styles.headerMenuitemSticky}>Etudes</Link>
+        <Link to="#linkId9" className={styles.headerMenuitemSticky}>Compétences</Link>
+        <Link to="#linkId10" className={styles.headerMenuitemSticky}>Réalisations</Link>
+        <Link to="#aboutme" className={styles.headerMenuitemSticky}>Contact</Link>
         <li className={styles.headerMenuItemTitleSticky}>Busiere Stéphane</li>
         </ul>
         </header>
@@ -207,10 +222,11 @@ else {
       
         <header   >
         <ul className={styles.headerMenu}>
-        <li className={styles.headerMenuitem}>A propos</li>
-        <li className={styles.headerMenuitem}>Réalisations</li>
-        <li className={styles.headerMenuitem}>Etudes</li>
-        <li className={styles.headerMenuitem}>Contact</li>
+        <Link to="#aboutme" className={styles.headerMenuitem}>A propos</Link>
+        <Link to="#linkId8" className={styles.headerMenuitem}>Etudes</Link>
+        <Link to="#linkId9" className={styles.headerMenuitem}>Compétences</Link>
+        <Link to="#linkId10" className={styles.headerMenuitem}>Réalisations</Link>
+        <Link to="#aboutme" className={styles.headerMenuitem}>Contact</Link>
         <li className={styles.headerMenuItemTitle}>Busiere Stéphane</li>
         </ul>
         </header>
@@ -286,20 +302,20 @@ else {
       <div className={styles.slide3}>
       <object className={styles.sprite}  data={sprite}>svg-animation</object>
       <p className={styles.why}>POURQUOI ME FAIRE CONFIANCE ?</p>
-      <p className={styles.about}>About </p>
-      <div className={styles.aboutLine}></div>
-      </div>
       
-      <div className={styles.slide4}>
+      
+      </div>
+      <div id="aboutme" className={styles.linkId7}></div>
+      <div  className={styles.slide4}>
       <div className={styles.railwrapper1}>
-      <span className={styles.railtext}>QUI SUIS JE</span>
+      <span  className={styles.railtext}>QUI SUIS JE</span>
       </div>
       
       </div>
       <div  className={styles.slide5}>
       <h2 className={styles.thingsTitle}>Je suis multiple</h2>
       <div className={styles.line}></div>
-      <div id="aboutme" className={styles.experienceText}>
+      <div  className={styles.experienceText}>
       I had a life before becoming a junior developper.
       A life where my passion was also my work, where nature was my office and danger was my every day. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatibus vitae fugiat, earum minima magnam ex consectetur id reprehenderit iusto perspiciatis labore est quia nihil ipsa? Est tempora enim asperiores?
       </div>
@@ -360,7 +376,7 @@ else {
       
       
       
-      <Link to="#experience" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={ linkStyleExperience} className={styles.experienceTitle} >Experiences</Link>
+      <Link to="#linkId7" onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} style={ linkStyleExperience} className={styles.experienceTitle} >Experiences</Link>
       
       </Slide>
      
@@ -368,33 +384,34 @@ else {
     
       <Slide  right spy={this.state.imgViz2} delay={500} >
      
-      <Link to="#studies" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Etudes</Link>
+      <Link to="#linkId8" onMouseEnter={this.toggleHoverStudies} onMouseLeave={this.toggleHoverStudies} style={ linkStyleStudies} className={styles.studiesTitle}>Etudes</Link>
       </Slide>
       
 
 
     
       <Slide  right spy={this.state.imgViz2} delay={700} >
-      <Link onMouseEnter={this.toggleHoverSkills} onMouseLeave={this.toggleHoverSkills} style={linkStyleSkills} className={styles.skillsTitle}>Compétences</Link>
+      <Link to="#linkId9" onMouseEnter={this.toggleHoverSkills} onMouseLeave={this.toggleHoverSkills} style={linkStyleSkills} className={styles.skillsTitle}>Compétences</Link>
       </Slide>
       
       
       
       <Slide  right spy={this.state.imgViz2} delay={900} >
-      <Link onMouseEnter={this.toggleHoverWork} onMouseLeave={this.toggleHoverWork} style={linkStyleWork} className={styles.workTitle}>Réalisations</Link>
+      <Link to="#linkId10" onMouseEnter={this.toggleHoverWork} onMouseLeave={this.toggleHoverWork} style={linkStyleWork} className={styles.workTitle}>Réalisations</Link>
       </Slide>
       
       </div>
       </VizSensor>
-      <div id='experience' className={styles.slide7}>
+      <div id='linkId7' className={styles.linkId7}></div>
+      <div  className={styles.slide7}>
       <div className={styles.experienceTitleContainer}></div>
       <h3 className={styles.pastexperiences}>EXPERIENCES</h3>
       <h3 className={styles.experiences}>PASSEES</h3>
       
       <div  className={styles.experiencesTextContainer}>
       <div className={styles.skiPatrolWrapper}>
-      <div className={styles.skipatrol} >Pisteur</div>
-      <svg className={styles.question} onClick={this.skiPatrolClick} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+      <div id='experience' className={styles.skipatrol} >Pisteur</div>
+      <svg  className={styles.question} onClick={this.skiPatrolClick} version="1.1"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
       width="33px" height="33px" viewBox="0 0 33 33" >
    <g>
      <path d="M21.57,8.668c0.851,0.75,1.275,2.143,1.275,4.178c0,1.605-0.209,2.73-0.628,3.373c-0.419,0.641-1.346,1.266-2.78,1.875
@@ -446,8 +463,9 @@ else {
    </div>
       </div>
       <div className={styles.clock} > </div>
+      <div id='linkId8' className={styles.linkId8} ></div>
       </div>
-      <div id='experience' className={styles.slide8}>
+      <div id='studies' className={styles.slide8}>
       <div className={styles.studiesTitleContainer}></div>
       
       <h3 className={styles.studies}>Etudes</h3>
@@ -467,9 +485,11 @@ else {
     
     
       </div>
-
+      <div id='linkId9' className={styles.linkId9} ></div>
       </div>
-      <div className={styles.slide9}>
+     
+      <div id='skills' className={styles.slide9}>
+    
       <div className={styles.experienceTitleContainer}></div>
       <h3 className={styles.experiences}>compétences</h3>
       <div className={styles.competencesContainer}>
@@ -497,17 +517,22 @@ else {
       
       </div>
       </div>
-      
+      <div id='linkId10' className={styles.linkId10} ></div>
       </div>
-      <div className={styles.slide10}>
+      <div id='work'className={styles.slide10}>
       <div className={styles.workTitleContainer}></div>
       <h3 className={styles.work}>Réalisations</h3>
       <h4 className={styles.inlineWorktitle}>Projets en ligne</h4>
-      <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
+      <div className={styles.inlineWorkBorisContainer} onClick={this.borisNodalClick}>
       <img className={styles.captureBoris} src={captureBoris} onClick={this.borisNodalClick}/>
       
       </div>
       {BorisNodalShow}
+      <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
+      <img className={styles.captureVerdon} src={captureVerdon} onClick={this.verdonNodalClick}/>
+      
+      </div>
+      {VerdonNodalShow}
       </div>
       </div>
      

@@ -189,6 +189,7 @@ header {
   padding: 1.25rem 0;
   margin: 0 1.25rem;
   color: #1e1e1e;
+  text-decoration: none;
 }
 .headerMenuItemTitle {
   position: absolute;
@@ -209,6 +210,7 @@ header {
   width: 5rem;
   height: 100vh;
   white-space: normal;
+  
  
   background-color: #fff;
   vertical-align: top;
@@ -237,6 +239,7 @@ header {
   font-size: .875rem;
   margin: 2.5rem;
   z-index: 100;
+  
 }
 .headerMenuitemSticky {
   display: inline-block; 
@@ -244,6 +247,7 @@ header {
   padding: 1.25rem 0;
   margin: 0 1.25rem;
   color: #1e1e1e;
+  text-decoration: none;
 }
 .headerMenuItemTitleSticky {
   position: absolute;
@@ -673,6 +677,40 @@ header {
   background-color: #EEEEEE;
   position: relative;
 }
+.linkId7 {
+  width: 3.2vw;
+  height: 100vh;
+  margin-top: 0px;
+  background-color: #EEEEEE;
+  position: relative;
+}
+.linkId8 {
+  width: 3.2vw;
+  height: 100vh;
+  margin-top: 0px;
+  position: absolute;
+  left: 1000px;
+  background-color: #EEEEEE;
+  position: relative;
+}
+.linkId9 {
+  width: 3vw;
+  height: 100vh;
+  margin-top: 0px;
+  position: absolute;
+  left: 1080px;
+  
+  position: relative;
+}
+.linkId10 {
+  width: 3vw;
+  height: 100vh;
+  margin-top: 0px;
+  position: absolute;
+  left: 1080px;
+  
+  position: relative;
+}
 .experienceTitleContainer {
   background-color: #1e1e1e;
   border-radius: 50%;
@@ -849,7 +887,7 @@ width: 400px;
 .cockpit {
   position: absolute;
   top:0px;
-  left: 4px;
+  left: 0px;
   z-index: 1;
 
 }
@@ -1075,7 +1113,7 @@ width: 400px;
   margin-right: 10px
 }
 
-.inlineWorkContainer {
+.inlineWorkBorisContainer {
   width: 30rem;
   height: 17rem;
   position: absolute;
@@ -1083,8 +1121,17 @@ width: 400px;
   left: 50px;
   background-color: rgb(153, 145, 145);
 }
-.captureBoris {
+.captureBoris,.captureVerdon {
   width: 400px;
   margin: 25px 0px 0px 40px;
   cursor: pointer;
 }
+.inlineWorkContainer {
+  width: 30rem;
+  height: 17rem;
+  position: absolute;
+  top: 40vh;
+  left: 580px;
+  background-color: rgb(153, 145, 145);
+}
+
