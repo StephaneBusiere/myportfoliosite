@@ -354,7 +354,7 @@ header {
 }
 .transparentDiv {
   
-  width: 30000px;
+  width: 50000px;
   height: 1000px;
   position: absolute;
   top: 0;
@@ -848,23 +848,23 @@ width: 400px;
 }
 .cockpit {
   position: absolute;
-  top:60px;
-  left: 0px;
+  top:0px;
+  left: 4px;
   z-index: 1;
 
 }
 
 .logoOclock {
   position: absolute;
-  top:250px;
-  left: 450px;
+  top:335px;
+  left: 550px;
   width: 100px;
   z-index: 2;
 }
 .languages {
   position: absolute;
-  top:250px;
-  left: 450px;
+  top:180px;
+  left: 550px;
   width: 400px;
   z-index: 1;
 }
@@ -895,7 +895,7 @@ width: 400px;
   height: 450px;
   background-color: whitesmoke;
   position: absolute;
-  top: 500px;
+  top: 430px;
   left: 60px;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -940,46 +940,60 @@ width: 400px;
 .competencesText{
   margin-left: 80px;
   font-family: 'Playfair Display',sans-serif;
-  font-size: 18px;
+  font-size: 25px;
 
 }
+.competencesText2{
+  margin-left: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 25px;
 
+}
 .html {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 80px;
 
 }
 .css {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 40px;
 }
 
 .php {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 40px;
 }
 .sql {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 40px;
 }
 
 .js {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 80px;
   margin-top: 40px;
 }
 
 .languagesContainer {
   display: flex;
   flex-direction: column;
+  border-right: thin solid gray;
+  width: 250px;
 }
 
 .frameworkContainer {
   display: flex;
   flex-direction: column;
+  border-right: thin solid gray;
+  width: 300px;
+}
+.technoContainer {
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .react {
@@ -999,16 +1013,78 @@ width: 400px;
 }
 .wordpress {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top: 0px;
 }
 .redux{
   width: 100px;
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top: 40px;
 }
 .git {
   width: 100px;
-  margin-left: 50px;
+  margin-left: 70px;
   margin-top: 40px;
+}
+
+.slide10 {
+  width: 60vw;
+  height: 100vh;
+  margin-top: 0px;
+  border-right:  2px solid #D7D7D7;
+  background-color:white;
+  position: relative;
+}
+
+.workTitleContainer {
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  width: 13.5rem;
+  height: 200px;
+  color: #1e1e1e;
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  left: 500px;
+}
+
+.work {
+  color: whitesmoke;
+  position: absolute;
+  top: 90px;
+  left: 530px;
+  z-index:11;
+  font-family: 'Playfair Display',sans-serif;
+  font-size: 25px;
+}
+.inlineWorktitle {
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  margin-top: 300px;
+  margin-left: 40px;
+  width: 400px;
+}
+
+.inlineWorktitle:before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px
+}
+
+.inlineWorkContainer {
+  width: 30rem;
+  height: 17rem;
+  position: absolute;
+  top: 40vh;
+  left: 50px;
+  background-color: rgb(153, 145, 145);
+}
+.captureBoris {
+  width: 400px;
+  margin: 25px 0px 0px 40px;
+  cursor: pointer;
 }

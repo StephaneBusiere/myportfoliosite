@@ -28,6 +28,7 @@ import wordpress from '../images/icon-wordpress.png'
 import sql from '../images/sql.jpg'
 import git from '../images/git.jpg'
 import redux from '../images/redux.png'
+import captureBoris from '../images/captureBorisDoye.png'
 
 
 
@@ -36,6 +37,7 @@ import redux from '../images/redux.png'
 import Skipatrol from '../SkiPatrolInfo'
 import Kayaker from '../KayakerInfo'
 import Traveler from '../TravelerInfo'
+import BorisNodal from '../BorisNodal'
 import cockpit from '../images/cockpit.png'
 import logoOclock from '../images/logo-oclock.jpg'
 import languages from '../images/languages.png'
@@ -56,10 +58,12 @@ class Example extends Component {
     hoverWork: false,
     imgViz: false,
     imgViz2: false,
+    imgViz3: false,
     when: false,
     skiPatrolClick: false,
     kayakerClick: false,
     travelerClick: false,
+    borisNodalClick: false,
 
   }
   
@@ -71,6 +75,7 @@ class Example extends Component {
   this.crossClick=this.crossClick.bind(this);
   this.kayakerClick=this.kayakerClick.bind(this);
   this.travelerClick=this.travelerClick.bind(this);
+  this.borisNodalClick=this.borisNodalClick.bind(this);
 }
 
 
@@ -84,8 +89,11 @@ class Example extends Component {
     this.setState({travelerClick:!this.state.travelerClick})
   }
   crossClick () {
-    this.setState ({skiPatrolClick:false, kayakerClick:false})
+    this.setState ({skiPatrolClick:false, kayakerClick:false,borisNodalClick:false} )
     
+  }
+  borisNodalClick () {
+    this.setState ({borisNodalClick:!this.state.borisNodalClick})
   }
   toggleHover() {
     this.setState({hover: !this.state.hover})
@@ -111,6 +119,8 @@ class Example extends Component {
     const isKayakerTrue=this.state.kayakerClick
     let TravelerShow
     const isTravelerTrue=this.state.travelerClick
+    let BorisNodalShow
+    const isBorisNodalTrue=this.state.borisNodalClick
 if (isPatrolTrue ) {
   SkipatrolShow=<Skipatrol
   crossClick={this.crossClick}
@@ -127,6 +137,16 @@ if  (isTravelerTrue) {
   crossClick={this.crossClick}
   />
 } else {TravelerShow=''}
+
+if  (isBorisNodalTrue) {
+  BorisNodalShow=<BorisNodal
+  crossClick={this.crossClick}
+  />
+} else {BorisNodalShow=''}
+
+
+
+
 if (this.state.hover) {
       linkStyle = {backgroundImage: `url(${guatemala}`, objectFit: 'cover'};
       
@@ -164,7 +184,7 @@ else {
 }
     return (
 <div>
-      <div className={styles.headerWrapperSticky} style={{ opacity: this.state.imgViz ? 1 : 0.25,display :this.state.imgViz ?  'block' : 'none' }} >
+      <div className={styles.headerWrapperSticky} style={{ opacity: this.state.imgViz3 ? 1 : 0.25,display :this.state.imgViz3 ?  'block' : 'none' }} >
       
         <header   >
         <ul className={styles.headerMenuSticky}>
@@ -248,7 +268,7 @@ else {
     partialVisibility 
    
     onChange={(isVisible) => {
-      this.setState({imgViz: isVisible})
+      this.setState({imgViz3: isVisible})
     }}
   >
     <div className={styles.transparentDiv}></div>
@@ -436,7 +456,7 @@ else {
       <img className={styles.languages} src={languages} />
       <div className={styles.studiesContainer}> 
       <p>Aprés 6 mois de formation en autodidacte, j'ai choisi l'école O'clock et son format en téléprésentiel addapté à mon envie de travailler en full remote.
-      La formation de 7 mois (1000h), aussi labellisée « Grande École du Numérique », se décompose de la sorte : </p>
+      La formation de 7 mois 1000h, aussi labellisée « Grande École du Numérique », se décompose de la sorte : </p>
       <p>Le « Socle » de 3 mois apportant les bases du développement avec les technologies HTML5, CSS3, JavaScript, PHP et MySQL suivi d'une spécialisation au choix.</p>
       <p>J'ai eu la chance de faire deux spécialisations de 2 mois: </p>
       <p>Spécialisation ReactJS :</p>
@@ -469,8 +489,8 @@ else {
       <img className={styles.bootstrap} src={bootstrap} />
       
       </div>
-      <div className={styles.frameworkContainer}>
-      <p className={styles.competencesText}>Autres technos</p>
+      <div className={styles.technoContainer}>
+      <p className={styles.competencesText2}>Autres technos</p>
       <img className={styles.wordpress} src={wordpress} />
       <img className={styles.redux} src={redux} />
       <img className={styles.git} src={git} />
@@ -478,6 +498,16 @@ else {
       </div>
       </div>
       
+      </div>
+      <div className={styles.slide10}>
+      <div className={styles.workTitleContainer}></div>
+      <h3 className={styles.work}>Réalisations</h3>
+      <h4 className={styles.inlineWorktitle}>Projets en ligne</h4>
+      <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
+      <img className={styles.captureBoris} src={captureBoris} onClick={this.borisNodalClick}/>
+      
+      </div>
+      {BorisNodalShow}
       </div>
       </div>
      
