@@ -1069,7 +1069,7 @@ width: 400px;
   width: 60vw;
   height: 100vh;
   margin-top: 0px;
-  border-right:  2px solid #D7D7D7;
+  
   background-color:white;
   position: relative;
 }
@@ -1098,7 +1098,7 @@ width: 400px;
 .inlineWorktitle {
   font-size: 40px;
   font-family: 'Playfair Display',sans-serif;
-  margin-top: 300px;
+  margin-top: 280px;
   margin-left: 40px;
   width: 400px;
 }
@@ -1118,11 +1118,17 @@ width: 400px;
   height: 17rem;
   position: absolute;
   top: 40vh;
-  left: 50px;
+  left: 60px;
   background-color: rgb(153, 145, 145);
 }
-.captureBoris,.captureVerdon {
+.captureBoris,.captureVerdon, .captureDLHL,.captureOshop {
   width: 400px;
+  margin: 25px 0px 0px 40px;
+  cursor: pointer;
+}
+.captureOblog {
+  width: 400px;
+  height: 225px;
   margin: 25px 0px 0px 40px;
   cursor: pointer;
 }
@@ -1135,3 +1141,46 @@ width: 400px;
   background-color: rgb(153, 145, 145);
 }
 
+.verticalLine {
+  width: 2px;
+  height: 500px;
+  background-color: #EEEEEE;
+  margin-top: 320px;
+  position: absolute;
+  
+}
+
+.localWorktitle {
+  font-size: 40px;
+  font-family: 'Playfair Display',sans-serif;
+  margin-top: 280px;
+  margin-left: 40px;
+  width: 400px;
+}
+
+.localWorktitle:before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px
+}
+.localWorkBlogContainer {
+  width: 30rem;
+  height: 17rem;
+  position: absolute;
+  top: 70vh;
+  left: 60px;
+  background-color: rgb(153, 145, 145);
+}
+
+.localWorkContainer {
+  width: 30rem;
+  height: 17rem;
+  position: absolute;
+  top: 70vh;
+  left: 580px;
+  background-color: rgb(153, 145, 145);
+}

@@ -33,15 +33,17 @@ import captureVerdon from '../images/captureecoleVerdon.png'
 import cockpit from '../images/cockpit.png'
 import logoOclock from '../images/logo-oclock.jpg'
 import languages from '../images/languages.png'
-
-
+import captureDLHL from '../images/CaptureDLHL.png'
+import captureOshop from '../images/Oshop.png'
+import captureOblog from '../images/oblog.png'
+import captureProfile from '../images/CaptureOprofile.png'
 
 import Skipatrol from '../SkiPatrolInfo'
 import Kayaker from '../KayakerInfo'
 import Traveler from '../TravelerInfo'
 import BorisNodal from '../BorisNodal'
 import VerdonNodal from '../VerdonNodal'
-
+import DlhlNodal from '../DlhlNodal'
 
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
@@ -67,6 +69,7 @@ class Example extends Component {
     travelerClick: false,
     borisNodalClick: false,
     verdonNodalClick: false,
+    dlhlNodalClick: false,
 
   }
   
@@ -80,6 +83,7 @@ class Example extends Component {
   this.travelerClick=this.travelerClick.bind(this);
   this.borisNodalClick=this.borisNodalClick.bind(this);
   this.verdonNodalClick=this.verdonNodalClick.bind(this);
+  this.dlhlNodalClick=this.dlhlNodalClick.bind(this);
 }
 
 
@@ -93,7 +97,7 @@ class Example extends Component {
     this.setState({travelerClick:!this.state.travelerClick})
   }
   crossClick () {
-    this.setState ({skiPatrolClick:false, kayakerClick:false,travelerClick:false,borisNodalClick:false, verdonNodalClick:false} )
+    this.setState ({skiPatrolClick:false, kayakerClick:false,travelerClick:false,borisNodalClick:false, verdonNodalClick:false, dlhlNodalClick:false} )
     
   }
   borisNodalClick () {
@@ -102,7 +106,9 @@ class Example extends Component {
   verdonNodalClick () {
     this.setState ({verdonNodalClick:!this.state.verdonNodalClick})
   }
-
+  dlhlNodalClick () {
+    this.setState ({dlhlNodalClick:!this.state.dlhlNodalClick})
+  }
   toggleHover() {
     this.setState({hover: !this.state.hover})
   }
@@ -131,6 +137,8 @@ class Example extends Component {
     const isBorisNodalTrue=this.state.borisNodalClick
     let VerdonNodalShow
     const isVerdonNodalTrue=this.state.verdonNodalClick
+    let DlhlNodalShow
+    const isDlhlNodalTrue=this.state.dlhlNodalClick
 if (isPatrolTrue ) {
   SkipatrolShow=<Skipatrol
   crossClick={this.crossClick}
@@ -158,6 +166,11 @@ if  (isVerdonNodalTrue) {
   crossClick={this.crossClick}
   />
 } else {VerdonNodalShow=''}
+if  (isDlhlNodalTrue) {
+  DlhlNodalShow=<DlhlNodal
+  crossClick={this.crossClick}
+  />
+} else {DlhlNodalShow=''}
 
 
 
@@ -480,7 +493,7 @@ else {
       <p>Spécialisation ReactJS :</p>
       <p>Création d'un modèle d’installation / mise à niveau en JS ES6/ React router / Axios / Redux / webpack / les hooks / consomation d'une REST API  </p>
       <p>Spécialisation Wordpress :</p>
-      <p>découverte de WordPress, gestion du workflow en milieu professionnel avec Webpack, Composer et NPM) / configuration de WordPress pour une installation personnalisée custom / mise en place de Webpack pour compiler les fichiers afin de les regrouper en un seul / notions avancées autour des thèmes et plugins /création de plugins simples / principes avancés autour de WordPress et mise en production (REST API, déploiement etc).  </p>
+      <p>découverte de WordPress, gestion du workflow en milieu professionnel avec Webpack, Composer et NPM / configuration de WordPress pour une installation personnalisée custom / mise en place de Webpack pour compiler les fichiers afin de les regrouper en un seul / notions avancées autour des thèmes et plugins /création de plugins simples / principes avancés autour de WordPress et mise en production (REST API, déploiement etc).  </p>
       <p>Deux projets d'apothéose de 1 mois par équipe en méthode agile: cahier des charges, modélisation de la BDD, wireframes.</p>
     
     
@@ -519,7 +532,7 @@ else {
       </div>
       <div id='linkId10' className={styles.linkId10} ></div>
       </div>
-      <div id='work'className={styles.slide10}>
+      <div id='work' className={styles.slide10}>
       <div className={styles.workTitleContainer}></div>
       <h3 className={styles.work}>Réalisations</h3>
       <h4 className={styles.inlineWorktitle}>Projets en ligne</h4>
@@ -530,6 +543,30 @@ else {
       {BorisNodalShow}
       <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
       <img className={styles.captureVerdon} src={captureVerdon} onClick={this.verdonNodalClick}/>
+      
+      </div>
+      {VerdonNodalShow}
+      </div>
+      <div  className={styles.slide10}>
+      <div className={styles.verticalLine}></div>
+      <h4 className={styles.localWorktitle}>Projets en local</h4>
+      <div className={styles.inlineWorkBorisContainer} >
+      <img className={styles.captureDLHL} src={captureDLHL} onClick={this.dlhlNodalClick}/>
+      
+      </div>
+      {DlhlNodalShow}
+      <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
+      <img className={styles.captureOshop} src={captureOshop} onClick={this.verdonNodalClick}/>
+      
+      </div>
+      {VerdonNodalShow}
+      <div className={styles.localWorkBlogContainer} onClick={this.borisNodalClick}>
+      <img className={styles.captureOblog} src={captureOblog} onClick={this.borisNodalClick}/>
+      
+      </div>
+      {BorisNodalShow}
+      <div className={styles.localWorkContainer} onClick={this.borisNodalClick}>
+      <img className={styles.captureOshop} src={captureProfile} onClick={this.verdonNodalClick}/>
       
       </div>
       {VerdonNodalShow}
