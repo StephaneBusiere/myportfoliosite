@@ -15,7 +15,7 @@ export default class Traveler extends React.Component{
    
         return(
             <Zoom>
-            <div className={styles.SkiPatrolInfoWrapper}>
+            <div className={styles.travelerInfoWrapper}>
           
             <div className={styles.IframeSkiContainer}>
             <ul >

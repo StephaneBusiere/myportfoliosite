@@ -44,6 +44,9 @@ import Traveler from '../TravelerInfo'
 import BorisNodal from '../BorisNodal'
 import VerdonNodal from '../VerdonNodal'
 import DlhlNodal from '../DlhlNodal'
+import OshopNodal from '../OshopNodal'
+import OblogNodal from '../OblogNodal'
+import OprofileNodal from '../OprofileNodal'
 
 import Draggable from 'react-draggable';
 import  VizSensor from 'react-visibility-sensor';
@@ -70,6 +73,9 @@ class Example extends Component {
     borisNodalClick: false,
     verdonNodalClick: false,
     dlhlNodalClick: false,
+    oshopNodalClick: false,
+    oblogNodalClick: false,
+    oprofileNodalClick: false,
 
   }
   
@@ -84,6 +90,9 @@ class Example extends Component {
   this.borisNodalClick=this.borisNodalClick.bind(this);
   this.verdonNodalClick=this.verdonNodalClick.bind(this);
   this.dlhlNodalClick=this.dlhlNodalClick.bind(this);
+  this.oshopNodalClick=this.oshopNodalClick.bind(this);
+  this.oblogNodalClick=this.oblogNodalClick.bind(this);
+  this.oprofileNodalClick=this.oprofileNodalClick.bind(this);
 }
 
 
@@ -97,7 +106,7 @@ class Example extends Component {
     this.setState({travelerClick:!this.state.travelerClick})
   }
   crossClick () {
-    this.setState ({skiPatrolClick:false, kayakerClick:false,travelerClick:false,borisNodalClick:false, verdonNodalClick:false, dlhlNodalClick:false} )
+    this.setState ({skiPatrolClick:false, kayakerClick:false,travelerClick:false,borisNodalClick:false, verdonNodalClick:false, dlhlNodalClick:false,oshopNodalClick:false, oblogNodalClick:false,oprofileNodalClick:false} )
     
   }
   borisNodalClick () {
@@ -108,6 +117,15 @@ class Example extends Component {
   }
   dlhlNodalClick () {
     this.setState ({dlhlNodalClick:!this.state.dlhlNodalClick})
+  }
+  oshopNodalClick () {
+    this.setState ({oshopNodalClick:!this.state.oshopNodalClick})
+  }
+  oblogNodalClick () {
+    this.setState ({oblogNodalClick:!this.state.oblogNodalClick})
+  }
+  oprofileNodalClick () {
+    this.setState ({oprofileNodalClick:!this.state.oprofileNodalClick})
   }
   toggleHover() {
     this.setState({hover: !this.state.hover})
@@ -139,6 +157,12 @@ class Example extends Component {
     const isVerdonNodalTrue=this.state.verdonNodalClick
     let DlhlNodalShow
     const isDlhlNodalTrue=this.state.dlhlNodalClick
+    let OshopNodalShow
+    const isOshopNodalTrue=this.state.oshopNodalClick
+    let OblogNodalShow
+    const isOblogNodalTrue=this.state.oblogNodalClick
+    let OprofileNodalShow
+    const isOprofileNodalTrue=this.state.oprofileNodalClick
 if (isPatrolTrue ) {
   SkipatrolShow=<Skipatrol
   crossClick={this.crossClick}
@@ -171,8 +195,21 @@ if  (isDlhlNodalTrue) {
   crossClick={this.crossClick}
   />
 } else {DlhlNodalShow=''}
-
-
+if  (isOshopNodalTrue) {
+  OshopNodalShow=<OshopNodal
+  crossClick={this.crossClick}
+  />
+} else {OshopNodalShow=''}
+if  (isOblogNodalTrue) {
+  OblogNodalShow=<OblogNodal
+  crossClick={this.crossClick}
+  />
+} else {OblogNodalShow=''}
+if  (isOprofileNodalTrue) {
+  OprofileNodalShow=<OprofileNodal
+  crossClick={this.crossClick}
+  />
+} else {OprofileNodalShow=''}
 
 if (this.state.hover) {
       linkStyle = {backgroundImage: `url(${guatemala}`, objectFit: 'cover'};
@@ -213,7 +250,7 @@ else {
 <div>
       <div className={styles.headerWrapperSticky} style={{ opacity: this.state.imgViz3 ? 1 : 0.25,display :this.state.imgViz3 ?  'block' : 'none' }} >
       
-        <header   >
+        <header>
         <ul className={styles.headerMenuSticky}>
         <Link to="#aboutme" className={styles.headerMenuitemSticky}>A propos</Link>
         <Link to="#linkId8" className={styles.headerMenuitemSticky}>Etudes</Link>
@@ -224,6 +261,26 @@ else {
         </ul>
         </header>
         </div>
+
+        <nav className={styles.headerWrapperBurger} role="navigation"> 
+        <div className={styles.headerBurger}>
+        <input type="checkbox" />
+   
+    <span></span>
+    <span></span>
+    <span></span>
+    
+        <ul className={styles.headerMenuBurger}>
+        <Link to="#aboutme" className={styles.headerMenuitemBurger}>A propos</Link>
+        <Link to="#linkId8" className={styles.headerMenuitemBurger}>Etudes</Link>
+        <Link to="#linkId9" className={styles.headerMenuitemBurger}>Compétences</Link>
+        <Link to="#linkId10" className={styles.headerMenuitemBurger}>Réalisations</Link>
+        <Link to="#aboutme" className={styles.headerMenuitemBurger}>Contact</Link>
+        
+        </ul>
+        </div>
+        
+        </nav>
       <div  id="outerwrapper" className={styles.outerwrapper} ref={(container) =>this.containerElement=container} >
      <div id='container' className={styles.container} >
       <div className={styles.slide1}>
@@ -503,7 +560,7 @@ else {
      
       <div id='skills' className={styles.slide9}>
     
-      <div className={styles.experienceTitleContainer}></div>
+      <div className={styles.skillsTitleContainer}></div>
       <h3 className={styles.experiences}>compétences</h3>
       <div className={styles.competencesContainer}>
       
@@ -547,29 +604,30 @@ else {
       </div>
       {VerdonNodalShow}
       </div>
-      <div  className={styles.slide10}>
+      <div  className={styles.slide11}>
       <div className={styles.verticalLine}></div>
       <h4 className={styles.localWorktitle}>Projets en local</h4>
+      
       <div className={styles.inlineWorkBorisContainer} >
       <img className={styles.captureDLHL} src={captureDLHL} onClick={this.dlhlNodalClick}/>
-      
       </div>
       {DlhlNodalShow}
-      <div className={styles.inlineWorkContainer} onClick={this.borisNodalClick}>
-      <img className={styles.captureOshop} src={captureOshop} onClick={this.verdonNodalClick}/>
+      
+      <div className={styles.inlineWorkContainer}>
+      <img className={styles.captureOshop} src={captureOshop} onClick={this.oshopNodalClick}/>
+      </div>
+      {OshopNodalShow}
+      
+      <div className={styles.localWorkBlogContainer}>
+      <img className={styles.captureOblog} src={captureOblog} onClick={this.oblogNodalClick}/>
       
       </div>
-      {VerdonNodalShow}
-      <div className={styles.localWorkBlogContainer} onClick={this.borisNodalClick}>
-      <img className={styles.captureOblog} src={captureOblog} onClick={this.borisNodalClick}/>
+      {OblogNodalShow}
+      <div className={styles.localWorkContainer}>
+      <img className={styles.captureOshop} src={captureProfile} onClick={this.oprofileNodalClick}/>
       
       </div>
-      {BorisNodalShow}
-      <div className={styles.localWorkContainer} onClick={this.borisNodalClick}>
-      <img className={styles.captureOshop} src={captureProfile} onClick={this.verdonNodalClick}/>
-      
-      </div>
-      {VerdonNodalShow}
+      {OprofileNodalShow}
       </div>
       </div>
      
