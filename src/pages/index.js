@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import { Link } from "gatsby"
 import Slide from 'react-reveal/Slide'; 
-import StarfieldAnimation from 'react-starfield-animation'
 import styles from "./home.module.css"
 import sprite from '../images/sprite.svg'
 import stef from '../images/stefPicture.png'
@@ -290,7 +289,7 @@ else {
      <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>QUI SUIS JE ?</Link>      
       <div className={styles.headerWrapper}  >
       
-        <header className={styles.header} > >
+        <header className={styles.header} > 
         <ul className={styles.headerMenu}>
         <Link to="#aboutme" className={styles.headerMenuitem}>A propos</Link>
         <Link to="#linkId8" className={styles.headerMenuitem}>Etudes</Link>
@@ -336,8 +335,17 @@ else {
       </div>
       
       <div  className={styles.slide2} >
+      
       <div className={styles.stefPhotosContainer}>
+      <VizSensor
+      partialVisibility 
      
+      onChange={(isVisible) => {
+        this.setState({imgViz3: isVisible})
+      }}
+    >
+      <div className={styles.transparentDiv}></div>
+      </VizSensor>
     <img className={styles.stefPhoto2} src={stef} 
     style={{
       opacity: this.state.imgViz ? 1 : 1,
@@ -350,15 +358,7 @@ else {
     />
     
     
-    <VizSensor
-    partialVisibility 
    
-    onChange={(isVisible) => {
-      this.setState({imgViz3: isVisible})
-    }}
-  >
-    <div className={styles.transparentDiv}></div>
-    </VizSensor>
       <Slide bottom>
       <Draggable>
       

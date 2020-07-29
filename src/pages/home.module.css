@@ -360,7 +360,7 @@ header {
 .transparentDiv {
   
   width: 50000px;
-  height: 1000px;
+  height:100vh;
   position: absolute;
   top: 0;
 
@@ -1413,7 +1413,8 @@ transform: rotate(90deg);
 .railwrapper1 {
   transform: none;
   width: 400px;
-  height: 30px;
+  height: 70px;
+  border-bottom: thin solid black;
 }
 .railtext {
   top: 0%;
@@ -1421,17 +1422,120 @@ transform: rotate(90deg);
   width: 400px;
   font-size: 60px;
 }
+.slide4 {
+  width: 400px;
+  height: 0px;
+  border-top: thin solid black;
 }
-@media only screen and (min-width : 1000px) {
-  .header {
+.thingsTitle {
+  font-size: 45px;
+  margin-left: 8px
+}
+.thingsTitle:after {
+  width: 70px;
+}
+.experienceText {
+  margin-left: 20px;
+  width: 350px;
+}
+.kayak {
+  width: 250px;
+  height: 400px;
+}
+.pisteur {
+  width: 300px;
+  height: 400px;
+  margin: 0;
+}
+.slide5 {
+  width: 400px;
+  height: 90vh
+}
+.presentationContainer {
+  top: 670px;
+  left: 150px;
+}
+.slide6 {
+  width: 400px;
+  height: 60vh
+}
+.experienceTitle, .studiesTitle, .workTitle, .skillsTitle {
+  font-size: 50px;
+  color: rgb(10, 1, 1);
+  
+}
+.slide7 {
+  width: 400px;
+  height: 110vh;
+}
+.clock {
+  width: 400px;
+  height: 892px;
+  top: 0px;
+  margin-left: 2px;
+  position: absolute;
+}
+.kayaker, .traveler, .skipatrol {
+  color: white;
+  z-index: 2;
+}
+.kayaker:before, .traveler:before, .skipatrol:before {
+  background-color: white;
+}
+.question {
+  fill: white;
+  z-index: 2;
+}
+.linkId8 {
+  width:400px;
+  height: 20px;
+  left: 0px;
+}
+.slide8 {
+  width: 400px;
+  height: 140vh
+}
+.cockpit {
+  width: 300px;
+}
+.languages {
+  top: 80px;
+  left: 180px;
+  width: 200px
+}
+.studiesTitleContainer {
+  width: 200px;
+  height: 200px;
+  top: 50px;
+  left: 30px;
+}
+.studies {
+  top: 110px;
+  left: 80px;
+}
+.studiesContainer {
+  width: 320px;
+  height: 950px;
+  top: 30vh
+
+}
+}
+
+
+@media only screen and (min-width : 600px) and (max-width: 1500px){
+.header {
     display: block;
   }
 .knowmore {
   top: 60%;
   left: 2%
 }
-  .headerWrapperSticky {
+.headerWrapperSticky {
   opacity: 1 !important;
+}
+.transparentDiv {
+  left: 2100px;
+  height: 100vh;
 }
 .headerMenuItemTitle {
   font-size: 1.5rem;
@@ -1445,6 +1549,7 @@ transform: rotate(90deg);
 .slide7 {
   width: 120vh;
 }
+
   .experienceTitleContainer {
   width: 160px;
   height: 160px;
@@ -1458,26 +1563,30 @@ transform: rotate(90deg);
 .cockpit {
     height: 240px;
   }  
-  .languages {
+.languages {
     height: 150px;
     width: 280px;
     left: 300px;
     top: 110px;
     
   }
-  .logoOclock {
+.logoOclock {
     top: 187px;
     left: 300px;
   }
-  .studiesContainer {
+.studiesContainer {
     top: 35vh;
     width: 870px;
     left: 20px;
     font-size: 17px;
   }
-  .railtext {
+.railtext {
     font-size: 8.5rem;
     left: -900%;
+  }
+  .container {
+    width: 1200vw;
+    height:100vh;
   }
 
 }
@@ -1503,4 +1612,5 @@ transform: rotate(90deg);
   height: 450px;
   font-size: 18px;
 }
+
 }

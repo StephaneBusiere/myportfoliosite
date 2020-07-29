@@ -86,8 +86,31 @@
     left:271px;
     width: 40px;
 }
+@media only screen and (max-width : 475px) {
+    .travelerInfoWrapper {
+        width: 400px;
+        height: 220px;
+        margin: 0px 0px 0px 72px;
+        position: absolute;
+        left: -120px;
 
-@media only screen and (max-width : 1100px) {
+    }
+    .SkiPatrolWrapper {
+        width: 400px;
+        left: 0;
+    }
+    .IframeSkiContainer {
+        width: 400px;
+    }
+    .IframeSki {
+        display: none;
+    }
+    .cross {
+        top: 5px;
+        right: 30px; 
+    }
+}
+@media only screen and (min-width : 1100px) {
     .skiMenuItem {
         font-size: 18px;
     }
