@@ -1204,12 +1204,17 @@ width: 400px;
   left: 580px;
   background-color: rgb(153, 145, 145);
 }
+/*////////mediaqueyries///////////*/
+
 
 @media only screen and (max-width : 475px) {
+  .headerWrapper {
+    display: none;
+  }
   .headerWrapperBurger {
     display: block;
     width: 400px;
-    height: 40px;
+    height: 60px;
 
 
   }
@@ -1315,9 +1320,11 @@ width: 400px;
     transform : rotate(90deg);
     position: absolute;
     top: 0;
-    display: none !important;
+    opacity: 0 !important;
   }
-  
+  .header {
+    display: none;
+  }
   .outerwrapper {
     width: 100vh;
   height: 4000px;
@@ -1332,17 +1339,74 @@ width: 400px;
     display: block;
     flex-direction: column;
   }
- 
-
+ .hacker {
+  height: 50%;
+  width: 400px;
+  
+ }
+.slide1 {
+  width: 400px;
+  height: 115vh;
+}
+.intro {
+  position: absolute;
+  top:420px;
+  left: 0;
+  margin-left: 0px;
+}
+.stefPhoto2 {
+  width: 400px !important;
+  height: 400px !important;
+}
+.introLines {
+  font-size: 8vh;
+}
+.introLinesContainer1 {
+  left: 0;
+  top: 280px;
+}
+.introLinesContainer2 {
+  left: 0;
+  top: 330px;
+}
+.introLinesContainer3 {
+  left: 0;
+  top: 380px;
+}
+.introLinesContainer4 {
+  left: 0;
+  top: 430px;
+}
+.hidePhoto {
+  left: 20px;
+  width: 15%;
+}
+.slide2 {
+  width: 400px;
+  height: 200px;
+}
+.sprite {
+width: 40%;
+top: 0%;
+left: 70px;
+transform: rotate(90deg);
+}
+.why {
+  font-size: 15px;
+  top: 40%;
+  left: 70px;
+}
 }
 @media only screen and (min-width : 1000px) {
-
+  .header {
+    display: block;
+  }
 .knowmore {
   top: 60%;
   left: 2%
 }
   .headerWrapperSticky {
-  display: none !important;
+  opacity: 1 !important;
 }
 .headerMenuItemTitle {
   font-size: 1.5rem;

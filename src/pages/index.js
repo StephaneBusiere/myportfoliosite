@@ -290,7 +290,7 @@ else {
      <Link to="#aboutme" state={{scrolled:true}} className={styles.knowmore}>QUI SUIS JE ?</Link>      
       <div className={styles.headerWrapper}  >
       
-        <header   >
+        <header className={styles.header} > >
         <ul className={styles.headerMenu}>
         <Link to="#aboutme" className={styles.headerMenuitem}>A propos</Link>
         <Link to="#linkId8" className={styles.headerMenuitem}>Etudes</Link>
@@ -340,7 +340,7 @@ else {
      
     <img className={styles.stefPhoto2} src={stef} 
     style={{
-      opacity: this.state.imgViz ? 1 : 0.25,
+      opacity: this.state.imgViz ? 1 : 1,
       width: 1000,
       height: 928,
       transition: 'opacity 500ms linear', 
