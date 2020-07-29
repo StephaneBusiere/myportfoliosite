@@ -1208,6 +1208,12 @@ width: 400px;
 
 
 @media only screen and (max-width : 475px) {
+  
+.knowmore {
+  top: 9%;
+  left: 4%;
+  color: white;
+}
   .headerWrapper {
     display: none;
   }
@@ -1386,15 +1392,34 @@ width: 400px;
   height: 200px;
 }
 .sprite {
-width: 40%;
-top: 0%;
+width: 50%;
+top: 26%;
 left: 70px;
 transform: rotate(90deg);
 }
 .why {
   font-size: 15px;
-  top: 40%;
+  top: 60%;
   left: 70px;
+}
+.slide3 {
+  width: 400px;
+  height: 500px;
+}
+.linkId7 {
+  width:400px;
+  height: 20px;
+}
+.railwrapper1 {
+  transform: none;
+  width: 400px;
+  height: 30px;
+}
+.railtext {
+  top: 0%;
+  left: 4%;
+  width: 400px;
+  font-size: 60px;
 }
 }
 @media only screen and (min-width : 1000px) {
