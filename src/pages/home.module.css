@@ -1,4 +1,10 @@
 
+.body {
+  width: 100vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 .outerwrapper {
   width: 100vh;
   height: 4000px;
@@ -60,7 +66,7 @@
   font-size: 40px;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  top: 75%;
+  top: 80vh;
   left: 1%;
   padding: 15px;
   color: #1e1e1e;
@@ -1210,7 +1216,7 @@ width: 400px;
 @media only screen and (max-width : 475px) {
   
 .knowmore {
-  top: 9%;
+  top: 45vh;
   left: 4%;
   color: white;
 }
@@ -1333,9 +1339,10 @@ width: 400px;
   }
   .outerwrapper {
     width: 100vh;
-  height: 4000px;
+  height: 8000px;
   position: relative;
   transform: none;
+  overflow:hidden;
  
 }
   .container {
@@ -1493,7 +1500,7 @@ transform: rotate(90deg);
 }
 .slide8 {
   width: 400px;
-  height: 140vh
+  height: 160vh
 }
 .cockpit {
   width: 300px;
@@ -1502,6 +1509,11 @@ transform: rotate(90deg);
   top: 80px;
   left: 180px;
   width: 200px
+}
+.logoOclock {
+  top: 140px;
+  left: 300px;
+  width: 80px;
 }
 .studiesTitleContainer {
   width: 200px;
@@ -1517,7 +1529,20 @@ transform: rotate(90deg);
   width: 320px;
   height: 950px;
   top: 30vh
-
+  
+}
+.slide9 {
+  width: 400px;
+  height: 250vh;
+}
+.competencesContainer {
+  width: 700px;
+  height: 1580px;
+  padding-top: 240px;
+  margin-top: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
 }
 }
 
@@ -1527,7 +1552,7 @@ transform: rotate(90deg);
     display: block;
   }
 .knowmore {
-  top: 60%;
+  top: 80vh;
   left: 2%
 }
 .headerWrapperSticky {

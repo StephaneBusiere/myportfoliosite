@@ -246,7 +246,7 @@ else {
   linkStyle = {}
 }
     return (
-<div>
+<div className={styles.body}>
       <div className={styles.headerWrapperSticky} style={{ opacity: this.state.imgViz3 ? 1 : 0.25,display :this.state.imgViz3 ?  'block' : 'none' }} >
       
         <header>
